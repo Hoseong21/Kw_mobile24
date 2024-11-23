@@ -4,7 +4,166 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="광운대 맛집 추천 어플"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#FFBB86FC"
+        android:textColor="#FFFFFF"/>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/btnrice"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shape">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/f_rice"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="한식"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnchina"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shape">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/f_china"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="중식"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnsteak"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shape">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/f_steak"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="양식"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnsushi"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shape">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/f_sushi"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="일식"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btnfastfood"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shape">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/f_fastfood"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="햄버거"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btncoffee"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/shape">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/f_coffee"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="카페"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+    </GridLayout>
 
 </LinearLayout>
