@@ -13,7 +13,7 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="337dp"
-        app:srcCompat="@drawable/f_rice"
+        app:srcCompat="@drawable/f_china"
         android:contentDescription="" /> <!-- 접근성을 위한 설명 -->
 
     <!-- 텍스트 정보 섹션 -->
@@ -36,7 +36,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="광운대김밥"
+                android:text="진짜루"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
@@ -58,7 +58,7 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="대표메뉴:참치김밥, 치즈김밥"
+            android:text="대표메뉴:짜장면, 짬뽕"
             android:textSize="20sp"
             android:layout_marginTop="16dp" />
 
@@ -67,7 +67,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="위치:서울특별시 노원구 광운로 20 80주년기념관 내 복지매장"
+            android:text="위치:서울특별시 노원구 광운로 33 지하 1층"
             android:textSize="20sp"
             android:layout_marginTop="16dp" />
 
@@ -76,7 +76,7 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="전화번호:02-941-7446"
+            android:text="전화번호:02-915-2011"
             android:textSize="20sp"
             android:layout_marginTop="16dp" />
 
@@ -85,7 +85,7 @@
             android:id="@+id/textView6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="영업시간:9:00~20:00"
+            android:text="영업시간:10:00~20:30"
             android:textSize="20sp"
             android:layout_marginTop="16dp" />
     </LinearLayout>
