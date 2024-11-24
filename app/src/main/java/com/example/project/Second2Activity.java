@@ -76,5 +76,6 @@ public class Second2Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

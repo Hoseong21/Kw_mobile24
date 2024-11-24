@@ -6,6 +6,13 @@
     android:gravity="center"
     android:padding="16dp">
 
+    <TextView
+        android:id="@+id/asdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Hello World!"/>
+
     <!-- 다음 화면으로 이동하는 버튼 -->
     <Button
         android:id="@+id/btnNext"

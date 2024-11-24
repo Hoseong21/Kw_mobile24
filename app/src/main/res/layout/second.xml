@@ -211,6 +211,7 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/koreanfoodpicture1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_rice"/>
@@ -223,25 +224,31 @@
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodname1"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="광운대김밥"
+                                android:text="한식1"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodrating1"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="76dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:gravity="left"
+                                android:isIndicator="true"
                                 android:numStars="5"
                                 android:rating="4"
-                                android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
-                                android:isIndicator="true"/>
+                                android:stepSize="0"/>
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
@@ -258,6 +265,7 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/koreanfoodpicture2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_rice"/>
@@ -270,25 +278,31 @@
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodname2"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="윤스쿡"
+                                android:text="한식2"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodrating2"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="76dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:gravity="left"
+                                android:isIndicator="true"
                                 android:numStars="5"
                                 android:rating="4.5"
-                                android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
-                                android:isIndicator="true"/>
+                                android:stepSize="0" />
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
@@ -305,6 +319,7 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/koreanfoodpicture3"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_rice"/>
@@ -317,15 +332,20 @@
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodname3"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="김가네"
+                                android:text="한식3"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
+                                android:id="@+id/koreanfoodrating3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
@@ -362,6 +382,7 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/koreanfoodpicture4"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_rice" />
@@ -373,16 +394,21 @@
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodname4"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="김밥천국"
+                                android:text="한식4"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodrating4"
+                                android:layout_width="76dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
@@ -410,6 +436,7 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/koreanfoodpicture5"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_rice" />
@@ -421,16 +448,21 @@
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodname5"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="김밥천국"
+                                android:text="한식5"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodrating5"
+                                android:layout_width="76dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
@@ -458,6 +490,7 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/koreanfoodpicture6"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_rice" />
@@ -469,16 +502,21 @@
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodname6"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="김밥천국"
+                                android:text="한식6"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/koreanfoodrating6"
+                                android:layout_width="76dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
