@@ -19,6 +19,16 @@ public class Second5Activity extends AppCompatActivity {
         LinearLayout btnSteak2 = findViewById(R.id.btnSteak2);
         LinearLayout btnCafe2 = findViewById(R.id.btnCafe2);
 
+        LinearLayout btnFast_1 = findViewById(R.id.btnFast_1);
+
+        btnFast_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Second5Activity.this, third5.class);
+                startActivity(intent);
+            }
+        });
+
         // 한식 버튼 클릭 이벤트
         btnRice2.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -227,7 +227,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="푸른스시"
+                                android:text="서민초밥"
                                 android:textColor="#000000"
                                 android:textSize="12dp" />
 
@@ -321,7 +321,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="서민초밥"
+                                android:text="푸른스시"
                                 android:textColor="#000000"
                                 android:textSize="12dp" />
 

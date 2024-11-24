@@ -227,7 +227,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="김밥천국"
+                                android:text="광운대김밥"
                                 android:textColor="#000000"
                                 android:textSize="12dp" />
 

@@ -1,9 +1,9 @@
 package com.example.project;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +19,18 @@ public class Second2Activity extends AppCompatActivity {
         LinearLayout btnSteak2 = findViewById(R.id.btnSteak2);
         LinearLayout btnFast2 = findViewById(R.id.btnFast2);
         LinearLayout btnCafe2 = findViewById(R.id.btnCafe2);
+
+        LinearLayout btnChina_1 = findViewById(R.id.btnChina_1);
+
+        btnChina_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Second2Activity.this, third2.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         // 한식 버튼 클릭 이벤트
         btnRice2.setOnClickListener(new View.OnClickListener() {

@@ -20,6 +20,16 @@ public class Second4Activity extends AppCompatActivity {
         LinearLayout btnFast2 = findViewById(R.id.btnFast2);
         LinearLayout btnCafe2 = findViewById(R.id.btnCafe2);
 
+        LinearLayout btnSteak_1 = findViewById(R.id.btnSteak_1);
+
+        btnSteak_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Second4Activity.this, third4.class);
+                startActivity(intent);
+            }
+        });
+
         // 한식 버튼 클릭 이벤트
         btnRice2.setOnClickListener(new View.OnClickListener() {
             @Override

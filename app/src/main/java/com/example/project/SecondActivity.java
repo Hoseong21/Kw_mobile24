@@ -19,6 +19,17 @@ public class SecondActivity extends AppCompatActivity {
         LinearLayout btnFast2 = findViewById(R.id.btnFast2);
         LinearLayout btnCafe2 = findViewById(R.id.btnCafe2);
 
+        LinearLayout btnRice_1 = findViewById(R.id.btnRice_1);
+
+        btnRice_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SecondActivity.this, third.class);
+                startActivity(intent);
+            }
+        });
+
+
         // 중식 버튼 클릭 이벤트
         btnChina2.setOnClickListener(new View.OnClickListener() {
             @Override

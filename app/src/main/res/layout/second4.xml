@@ -227,7 +227,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="3dp"
-                                android:text="이층블루스"
+                                android:text="도미노피자"
                                 android:textColor="#000000"
                                 android:textSize="12dp" />
 

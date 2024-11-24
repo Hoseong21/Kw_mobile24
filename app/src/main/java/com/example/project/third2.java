@@ -10,7 +10,7 @@ public class third2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.third); // XML 레이아웃을 지정 (예: activity_third.xml)
+        setContentView(R.layout.third2); // XML 레이아웃을 지정 (예: activity_third.xml)
 
         // 버튼 찾기
         Button backButton = findViewById(R.id.backButton);
