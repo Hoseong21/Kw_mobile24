@@ -116,7 +116,8 @@
             android:gravity="center"
             android:padding="5dp"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:background="#cccccc">
 
             <ImageView
                 android:layout_width="50dp"
@@ -126,8 +127,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="햄버거"
-                android:textSize="15dp"
+                android:text="패스트푸드\n 분식"
+                android:textSize="10dp"
                 android:gravity="center"
                 android:textColor="#000000"/>
         </LinearLayout>
@@ -211,6 +212,73 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/fastfoodpicture1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood"/>
+
+                    <TextView
+                        android:id="@+id/text_fastfood1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:text="사진 없음"
+                        android:textColor="#FF0000"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:visibility="gone" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/fastfoodname1"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="패스트푸드1"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating1"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnfast_2"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_fastfood"/>
@@ -223,16 +291,136 @@
 
                         <TableRow>
                             <TextView
+                                android:id="@+id/fastfoodname2"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="패스트푸드2"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating2"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnfast_3"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood"/>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/fastfoodname3"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="패스트푸드3"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="3dp"
-                                android:text="프랭크버거"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:stepSize="0.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:isIndicator="true"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 두 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnfast_4"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/fastfoodname4"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="패스트푸드4"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/fastfoodrating4"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
@@ -242,12 +430,14 @@
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
 
+                <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnFast_2"
+                    android:id="@+id/btnfast_5"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -258,43 +448,50 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/fastfoodpicture5"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_fastfood"/>
+                        android:src="@drawable/f_fastfood" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="center">
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/fastfoodname5"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="3dp"
-                                android:text="롯데리아"
+                                android:padding="5dp"
+                                android:text="패스트푸드5"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/fastfoodrating5"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:numStars="5"
-                                android:rating="4.5"
+                                android:rating="4"
                                 android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
 
+                <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnFast_3"
+                    android:id="@+id/btnfast_6"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -305,42 +502,2481 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/fastfoodpicture6"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_fastfood"/>
+                        android:src="@drawable/f_fastfood" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="center">
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/fastfoodname6"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="3dp"
-                                android:text="맘스터치"
+                                android:padding="5dp"
+                                android:text="패스트푸드6"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/fastfoodrating6"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:numStars="5"
-                                android:rating="4.5"
+                                android:rating="4"
                                 android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
+
             </LinearLayout>
+            <!-- 세 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_7"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname7"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드7"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating7"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_8"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname8"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드8"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating8"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_9"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname9"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드9"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating9"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 네 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_10"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname10"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드10"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating10"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_11"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture11"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname11"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드11"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating11"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_12"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture12"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname12"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드12"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating12"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 다섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_13"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture13"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname13"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드13"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating13"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_14"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture14"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname14"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드14"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating14"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_15"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture15"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname15"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드15"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating15"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 여섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_16"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture16"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname16"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드16"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating16"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_17"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture17"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname17"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드17"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating17"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_18"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture18"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname18"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드18"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating18"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 일곱 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_19"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture19"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname19"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드19"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating19"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_20"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture20"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname20"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드20"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating20"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_21"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture21"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname21"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드21"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating21"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 여덟 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_22"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture22"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname22"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드22"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating22"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_23"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture23"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname23"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드23"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating23"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_24"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture24"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname24"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드24"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating24"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 아홉 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_25"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture25"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname25"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드25"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating25"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_26"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture26"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname26"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드26"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating26"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_27"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture27"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname27"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드27"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating27"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_28"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture28"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname28"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드28"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating28"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_29"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture29"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname29"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드29"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating29"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_30"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture30"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname30"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드30"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating30"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열한 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/btnFast_31"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture31"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TextView
+                        android:id="@+id/text_fastfood31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="사진 없음"
+                        android:textColor="#FF0000"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname31"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드31"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating31"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnFast_32"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture32"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname32"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드32"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating32"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnFast_33"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture33"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname33"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드33"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating33"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열두 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_34"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture34"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname34"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드34"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating34"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_35"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture35"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname35"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드35"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating35"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_36"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture36"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname36"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드36"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating36"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열세 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_37"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture37"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname37"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드37"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating37"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_38"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture38"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname38"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드38"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating38"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_39"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture39"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname39"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드39"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating39"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열네 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_40"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture40"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname40"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드40"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating40"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_41"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture41"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname41"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드41"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating41"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_42"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture42"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname42"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드42"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating42"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열다섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_43"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture43"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname43"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드43"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating43"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_44"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture44"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname44"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드44"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating44"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_45"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture45"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname45"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드45"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating45"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열여섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_46"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture46"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname46"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드46"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating46"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_47"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture47"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname47"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드47"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating47"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnFast_48"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/fastfoodpicture48"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_fastfood" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/fastfoodname48"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="패스트푸드48"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/fastfoodrating48"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
 
         </GridLayout>
     </ScrollView>

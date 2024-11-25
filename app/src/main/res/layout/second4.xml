@@ -92,7 +92,8 @@
             android:gravity="center"
             android:padding="5dp"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:background="#cccccc">
 
             <ImageView
                 android:layout_width="50dp"
@@ -126,8 +127,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="햄버거"
-                android:textSize="15dp"
+                android:text="패스트푸드\n 분식"
+                android:textSize="10dp"
                 android:gravity="center"
                 android:textColor="#000000"/>
         </LinearLayout>
@@ -211,6 +212,73 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/westernfoodpicture1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_steak"/>
+
+                    <TextView
+                        android:id="@+id/text_westernfood1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:text="사진 없음"
+                        android:textColor="#FF0000"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:visibility="gone" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/westernfoodname1"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="양식1"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/westernfoodrating1"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnwestern_2"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/westernfoodpicture2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_steak"/>
@@ -223,16 +291,136 @@
 
                         <TableRow>
                             <TextView
+                                android:id="@+id/westernfoodname2"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="양식2"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/westernfoodrating2"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnwestern_3"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/westernfoodpicture3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_steak"/>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/westernfoodname3"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="양식3"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/westernfoodrating3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="3dp"
-                                android:text="도미노피자"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:stepSize="0.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:isIndicator="true"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 두 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnwestern_4"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/westernfoodpicture4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_steak" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/westernfoodname4"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="양식4"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/westernfoodrating4"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
@@ -242,12 +430,14 @@
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
 
+                <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnSteak_2"
+                    android:id="@+id/btnwestern_5"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -258,43 +448,50 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/westernfoodpicture5"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_steak"/>
+                        android:src="@drawable/f_steak" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="center">
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/westernfoodname5"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="3dp"
-                                android:text="퀸스테이크"
+                                android:padding="5dp"
+                                android:text="양식5"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/westernfoodrating5"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:numStars="5"
-                                android:rating="4.5"
+                                android:rating="4"
                                 android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
 
+                <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnSteak_3"
+                    android:id="@+id/btnwestern_6"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -305,42 +502,283 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/westernfoodpicture6"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_steak"/>
+                        android:src="@drawable/f_steak" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="center">
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/westernfoodname6"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="3dp"
-                                android:text="클라우드9"
+                                android:padding="5dp"
+                                android:text="양식6"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/westernfoodrating6"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:numStars="5"
-                                android:rating="4.5"
+                                android:rating="4"
                                 android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 세 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnwestern_7"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/westernfoodpicture7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_steak" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/westernfoodname7"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="양식7"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/westernfoodrating7"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnwestern_8"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/westernfoodpicture8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_steak" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/westernfoodname8"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="양식8"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/westernfoodrating8"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnwestern_9"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/westernfoodpicture9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_steak" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/westernfoodname9"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="양식9"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/westernfoodrating9"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 네 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnwestern_10"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/westernfoodpicture10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_steak" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/westernfoodname10"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="양식10"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/westernfoodrating10"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
             </LinearLayout>
-
 
         </GridLayout>
     </ScrollView>

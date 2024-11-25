@@ -20,7 +20,7 @@ import java.io.OutputStream;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "crawling.db"; // assets 폴더의 데이터베이스 이름
+    private static final String DATABASE_NAME = "restaurantDB.db"; // assets 폴더의 데이터베이스 이름
     private static final int DATABASE_VERSION = 1; // 데이터베이스 버전
     private final Context context;
     private static final String DATABASE_PATH = "/data/data/com.example.project/databases/"; // 앱 데이터베이스 경로

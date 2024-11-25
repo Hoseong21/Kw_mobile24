@@ -20,7 +20,8 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:background="#cccccc">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -126,8 +127,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="햄버거"
-                    android:textSize="15dp"
+                    android:text="패스트푸드\n 분식"
+                    android:textSize="10dp"
                     android:gravity="center"
                     android:textColor="#000000"/>
             </LinearLayout>
@@ -203,43 +204,56 @@
                     android:id="@+id/btnRice_1"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@drawable/shape"
                     android:layout_margin="1dp"
+                    android:background="@drawable/shape"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/koreanfoodpicture1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_rice"/>
+                        android:src="@drawable/f_rice" />
+
+                    <TextView
+                        android:id="@+id/text_koreanfood1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="사진 없음"
+                        android:textColor="#FF0000"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/koreanfoodname1"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
                                 android:padding="5dp"
                                 android:text="한식1"
                                 android:textColor="#000000"
-                                android:textSize="11dp"
-                                android:maxLines="1"
-                                android:ellipsize="end"
-                                android:gravity="start" />
+                                android:textSize="11dp" />
 
                             <RatingBar
                                 android:id="@+id/koreanfoodrating1"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
-                                android:layout_width="76dp"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:gravity="left"
@@ -248,7 +262,7 @@
                                 android:rating="4"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
-                                android:stepSize="0"/>
+                                android:stepSize="0" />
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
@@ -257,43 +271,44 @@
                     android:id="@+id/btnRice_2"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@drawable/shape"
                     android:layout_margin="1dp"
+                    android:background="@drawable/shape"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/koreanfoodpicture2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_rice"/>
+                        android:src="@drawable/f_rice" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/koreanfoodname2"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
                                 android:padding="5dp"
                                 android:text="한식2"
                                 android:textColor="#000000"
-                                android:textSize="11dp"
-                                android:maxLines="1"
-                                android:ellipsize="end"
-                                android:gravity="start" />
+                                android:textSize="11dp" />
 
                             <RatingBar
                                 android:id="@+id/koreanfoodrating2"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
-                                android:layout_width="76dp"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:gravity="left"
@@ -311,57 +326,57 @@
                     android:id="@+id/btnRice_3"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@drawable/shape"
                     android:layout_margin="1dp"
+                    android:background="@drawable/shape"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/koreanfoodpicture3"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_rice"/>
+                        android:src="@drawable/f_rice" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/koreanfoodname3"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
                                 android:padding="5dp"
                                 android:text="한식3"
                                 android:textColor="#000000"
-                                android:textSize="11dp"
-                                android:maxLines="1"
-                                android:ellipsize="end"
-                                android:gravity="start" />
+                                android:textSize="11dp" />
 
                             <RatingBar
                                 android:id="@+id/koreanfoodrating3"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:isIndicator="true"
                                 android:numStars="5"
                                 android:rating="4.5"
-                                android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
-                                android:isIndicator="true"/>
+                                android:stepSize="0.5" />
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
 
             </LinearLayout>
-
             <!-- 두 번째 행 -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -374,12 +389,12 @@
                     android:id="@+id/btnRice_4"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@drawable/shape"
                     android:layout_margin="1dp"
+                    android:background="@drawable/shape"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/koreanfoodpicture4"
@@ -393,31 +408,32 @@
                         android:gravity="center">
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/koreanfoodname4"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
                                 android:padding="5dp"
                                 android:text="한식4"
                                 android:textColor="#000000"
-                                android:textSize="11dp"
-                                android:maxLines="1"
-                                android:ellipsize="end"
-                                android:gravity="start" />
+                                android:textSize="11dp" />
 
                             <RatingBar
                                 android:id="@+id/koreanfoodrating4"
-                                android:layout_width="76dp"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:isIndicator="true"
                                 android:numStars="5"
                                 android:rating="4"
-                                android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
-                                android:isIndicator="true"/>
+                                android:stepSize="0.5" />
 
                         </TableRow>
                     </TableLayout>
@@ -428,12 +444,12 @@
                     android:id="@+id/btnRice_5"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@drawable/shape"
                     android:layout_margin="1dp"
+                    android:background="@drawable/shape"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/koreanfoodpicture5"
@@ -447,31 +463,32 @@
                         android:gravity="center">
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/koreanfoodname5"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
                                 android:padding="5dp"
                                 android:text="한식5"
                                 android:textColor="#000000"
-                                android:textSize="11dp"
-                                android:maxLines="1"
-                                android:ellipsize="end"
-                                android:gravity="start" />
+                                android:textSize="11dp" />
 
                             <RatingBar
                                 android:id="@+id/koreanfoodrating5"
-                                android:layout_width="76dp"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:isIndicator="true"
                                 android:numStars="5"
                                 android:rating="4"
-                                android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
-                                android:isIndicator="true"/>
+                                android:stepSize="0.5" />
 
                         </TableRow>
                     </TableLayout>
@@ -482,12 +499,12 @@
                     android:id="@+id/btnRice_6"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@drawable/shape"
                     android:layout_margin="1dp"
+                    android:background="@drawable/shape"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/koreanfoodpicture6"
@@ -501,37 +518,2644 @@
                         android:gravity="center">
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/koreanfoodname6"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
                                 android:padding="5dp"
                                 android:text="한식6"
                                 android:textColor="#000000"
-                                android:textSize="11dp"
-                                android:maxLines="1"
-                                android:ellipsize="end"
-                                android:gravity="start" />
+                                android:textSize="11dp" />
 
                             <RatingBar
                                 android:id="@+id/koreanfoodrating6"
-                                android:layout_width="76dp"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:isIndicator="true"
                                 android:numStars="5"
                                 android:rating="4"
-                                android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
-                                android:isIndicator="true"/>
+                                android:stepSize="0.5" />
 
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
-            </LinearLayout>
 
+            </LinearLayout>
+            <!-- 세 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_7"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname7"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식7"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating7"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_8"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname8"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식8"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating8"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_9"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname9"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식9"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating9"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 네 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_10"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname10"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식10"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating10"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_11"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture11"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname11"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식11"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating11"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_12"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture12"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname12"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식12"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating12"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 다섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_13"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture13"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname13"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식13"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating13"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_14"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture14"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname14"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식14"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating14"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_15"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture15"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname15"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식15"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating15"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 여섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_16"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture16"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname16"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식16"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating16"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_17"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture17"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname17"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식17"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating17"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_18"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture18"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname18"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식18"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating18"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 일곱 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_19"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture19"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname19"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식19"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating19"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_20"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture20"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname20"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식20"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating20"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_21"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture21"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname21"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식21"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating21"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 여덟 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_22"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture22"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname22"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식22"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating22"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_23"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture23"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname23"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식23"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating23"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_24"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture24"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname24"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식24"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating24"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 아홉 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_25"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture25"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname25"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식25"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating25"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_26"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture26"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname26"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식26"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating26"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_27"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture27"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname27"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식27"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating27"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_28"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture28"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname28"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식28"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating28"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_29"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture29"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname29"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식29"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating29"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_30"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture30"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname30"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식30"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating30"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열한 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/btnRice_31"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture31"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TextView
+                        android:id="@+id/text_koreanfood31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="사진 없음"
+                        android:textColor="#FF0000"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname31"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식31"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating31"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnRice_32"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture32"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname32"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식32"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating32"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnRice_33"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture33"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname33"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식33"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating33"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열두 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_34"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture34"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname34"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식34"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating34"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_35"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture35"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname35"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식35"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating35"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_36"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture36"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname36"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식36"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating36"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열세 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_37"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture37"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname37"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식37"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating37"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_38"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture38"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname38"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식38"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating38"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_39"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture39"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname39"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식39"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating39"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열네 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_40"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture40"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname40"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식40"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating40"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_41"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture41"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname41"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식41"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating41"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_42"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture42"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname42"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식42"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating42"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열다섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_43"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture43"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname43"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식43"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating43"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_44"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture44"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname44"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식44"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating44"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_45"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture45"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname45"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식45"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating45"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열여섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_46"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture46"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname46"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식46"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating46"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_47"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture47"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname47"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식47"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating47"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_48"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture48"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname48"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식48"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating48"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 열일곱 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_49"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture49"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname49"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식49"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating49"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_50"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture50"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname50"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식50"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating50"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnRice_51"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/koreanfoodpicture51"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_rice" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/koreanfoodname51"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="한식51"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/koreanfoodrating51"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
         </GridLayout>
     </ScrollView>
 </LinearLayout>

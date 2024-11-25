@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         // "분류" 컬럼의 첫 번째 값을 가져오기
         String firstCategory = "";
-        Cursor cursor = db.rawQuery("SELECT 분류 FROM crawling LIMIT 1", null);
+        Cursor cursor = db.rawQuery("SELECT 분류 FROM restaurantDB LIMIT 1", null);
         if (cursor.moveToFirst()) {
             firstCategory = cursor.getString(0); // 첫 번째 값
         }

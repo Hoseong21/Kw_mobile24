@@ -68,7 +68,8 @@
             android:gravity="center"
             android:padding="5dp"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:background="#cccccc">
 
             <ImageView
                 android:layout_width="50dp"
@@ -126,8 +127,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="햄버거"
-                android:textSize="15dp"
+                android:text="패스트푸드\n 분식"
+                android:textSize="10dp"
                 android:gravity="center"
                 android:textColor="#000000"/>
         </LinearLayout>
@@ -211,6 +212,73 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/japanfoodpicture1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi"/>
+
+                    <TextView
+                        android:id="@+id/text_japanfood1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dp"
+                        android:text="사진 없음"
+                        android:textColor="#FF0000"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:visibility="gone" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/japanfoodname1"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="일식1"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating1"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnjapan_2"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_sushi"/>
@@ -223,16 +291,136 @@
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/japanfoodname2"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="서민초밥"
+                                android:text="일식2"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
+                                android:id="@+id/japanfoodrating2"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnjapan_3"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi"/>
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/japanfoodname3"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="일식3"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating3"
                                 android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:stepSize="0.5"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:isIndicator="true"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 두 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnjapan_4"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/shape"
+                    android:layout_margin="1dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/japanfoodname4"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:text="일식4"
+                                android:textColor="#000000"
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating4"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
@@ -242,12 +430,14 @@
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
 
+                <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnSushi_2"
+                    android:id="@+id/btnjapan_5"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -258,43 +448,50 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/japanfoodpicture5"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_sushi"/>
+                        android:src="@drawable/f_sushi" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="center">
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/japanfoodname5"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="호시 아카리"
+                                android:text="일식5"
                                 android:textColor="#000000"
-                                android:textSize="10dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/japanfoodrating5"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:numStars="5"
-                                android:rating="4.5"
+                                android:rating="4"
                                 android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
 
+                <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnSushi_3"
+                    android:id="@+id/btnjapan_6"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -305,42 +502,456 @@
                     android:focusable="true">
 
                     <ImageView
+                        android:id="@+id/japanfoodpicture6"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/f_sushi"/>
+                        android:src="@drawable/f_sushi" />
 
                     <TableLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:gravity="center">
 
                         <TableRow>
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/japanfoodname6"
+                                android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:padding="5dp"
-                                android:text="푸른스시"
+                                android:text="일식6"
                                 android:textColor="#000000"
-                                android:textSize="12dp" />
+                                android:textSize="11dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:gravity="start" />
 
                             <RatingBar
-                                android:layout_width="wrap_content"
+                                android:id="@+id/japanfoodrating6"
+                                android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:numStars="5"
-                                android:rating="4.5"
+                                android:rating="4"
                                 android:stepSize="0.5"
                                 android:scaleX="0.7"
                                 android:scaleY="0.7"
                                 android:isIndicator="true"/>
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 세 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnjapan_7"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture7"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/japanfoodname7"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="일식7"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating7"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnjapan_8"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/japanfoodname8"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="일식8"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating8"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnjapan_9"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture9"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/japanfoodname9"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="일식9"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating9"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 네 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnjapan_10"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture10"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/japanfoodname10"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="일식10"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating10"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 두 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnjapan_11"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture11"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/japanfoodname11"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="일식11"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating11"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <!-- 세 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnjapan_12"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture12"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/japanfoodname12"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="일식12"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating12"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 다섯 번째 행 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!-- 첫 번째 추가 아이템 -->
+                <LinearLayout
+                    android:id="@+id/btnjapan_13"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/shape"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/japanfoodpicture13"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/f_sushi" />
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/japanfoodname13"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:gravity="start"
+                                android:maxLines="1"
+                                android:padding="5dp"
+                                android:text="일식13"
+                                android:textColor="#000000"
+                                android:textSize="11dp" />
+
+                            <RatingBar
+                                android:id="@+id/japanfoodrating13"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="77dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4"
+                                android:scaleX="0.7"
+                                android:scaleY="0.7"
+                                android:stepSize="0.5" />
+
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
             </LinearLayout>
-
 
         </GridLayout>
     </ScrollView>
