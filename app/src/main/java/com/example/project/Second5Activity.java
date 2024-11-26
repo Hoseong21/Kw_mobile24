@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -33,15 +34,20 @@ public class Second5Activity extends AppCompatActivity {
         Button btnDis = findViewById(R.id.btnDis);
         Button btnRat = findViewById(R.id.btnRat);
 
-        LinearLayout btnFast_1 = findViewById(R.id.btnFast_1);
+        RatingBar[] fastFoodRatings = new RatingBar[48];
+        TextView[] fastFoodNames = new TextView[48];
+        String[] imageUrls = new String[48];
+        String[] fastFoodMenus = new String[48];
+        String[] fastFoodAddress = new String[48];
+        String[] fastFoodTel = new String[48];
+        String[] fastFoodTime = new String[48];
 
-        btnFast_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Second5Activity.this, third5.class);
-                startActivity(intent);
-            }
-        });
+        LinearLayout[] btnFast = new LinearLayout[48];
+        for (int i = 1; i <= 48; i++) {
+            String buttonID = "btnFast_" + i; // 동적 ID 생성
+            int resID = getResources().getIdentifier(buttonID, "id", getPackageName()); // 리소스 ID 가져오기
+            btnFast[i - 1] = findViewById(resID); // 배열에 할당
+        }
 
         // 한식 버튼 클릭 이벤트
         btnRice2.setOnClickListener(new View.OnClickListener() {
@@ -91,27 +97,45 @@ public class Second5Activity extends AppCompatActivity {
         btnDis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_array(db, 1);
-                rating_array(db, 1);
-                pictures_array(db, 1);
+                name_array(db, 1, fastFoodNames);
+                rating_array(db, 1, fastFoodRatings);
+                pictures_array(db, 1, imageUrls);
+                etc_array(db, 1, fastFoodMenus, fastFoodAddress, fastFoodTel, fastFoodTime);
             }
         });
         // 별점순 버튼 클릭 이벤트
         btnRat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_array(db, 2);
-                rating_array(db, 2);
-                pictures_array(db, 2);
+                name_array(db, 2, fastFoodNames);
+                rating_array(db, 2, fastFoodRatings);
+                pictures_array(db, 2, imageUrls);
+                etc_array(db, 2, fastFoodMenus, fastFoodAddress, fastFoodTel, fastFoodTime);
             }
         });
-        name_array(db, 0);
-        rating_array(db, 0);
-        pictures_array(db, 0);
+        for (int i = 0; i < btnFast.length; i++) {
+            final int index = i;  // i 값을 final로 선언하여 Intent에서 사용할 수 있도록 함
+            btnFast[i].setOnClickListener(v -> {
+                Intent intent = new Intent(Second5Activity.this, ThirdActivity.class);
+                intent.putExtra("foodTel", fastFoodTel[index]);
+                intent.putExtra("foodTime", fastFoodTime[index]);
+                intent.putExtra("foodAddress", fastFoodAddress[index]);
+                intent.putExtra("foodMenus", fastFoodMenus[index]);
+                intent.putExtra("imageUrls", imageUrls[index]);
+                intent.putExtra("foodRatings", fastFoodRatings[index].getRating());
+                intent.putExtra("foodNames", fastFoodNames[index].getText().toString());
+
+                startActivity(intent);
+            });
+        }
+
+        name_array(db, 0, fastFoodNames);
+        rating_array(db, 0, fastFoodRatings);
+        pictures_array(db, 0, imageUrls);
+        etc_array(db, 0, fastFoodMenus, fastFoodAddress, fastFoodTel, fastFoodTime);
     }
-    private void name_array(SQLiteDatabase db, int num) {
-        // TextView 배열 생성
-        TextView[] fastFoodNames = new TextView[48];
+
+    private void name_array(SQLiteDatabase db, int num, TextView[] fastFoodNames) {
         for (int i = 0; i < 48; i++) {
             String textViewID = "fastfoodname" + (i + 1); // ID 문자열 생성
             int resID = getResources().getIdentifier(textViewID, "id", getPackageName());
@@ -142,26 +166,12 @@ public class Second5Activity extends AppCompatActivity {
         fastfoodnamecursor.close();
     }
 
-    private void rating_array(SQLiteDatabase db, int num) {
-        // RatingBar 배열 선언
-        RatingBar[] fastfoodRatings = {
-                findViewById(R.id.fastfoodrating1), findViewById(R.id.fastfoodrating2), findViewById(R.id.fastfoodrating3),
-                findViewById(R.id.fastfoodrating4), findViewById(R.id.fastfoodrating5), findViewById(R.id.fastfoodrating6),
-                findViewById(R.id.fastfoodrating7), findViewById(R.id.fastfoodrating8), findViewById(R.id.fastfoodrating9),
-                findViewById(R.id.fastfoodrating10), findViewById(R.id.fastfoodrating11), findViewById(R.id.fastfoodrating12),
-                findViewById(R.id.fastfoodrating13), findViewById(R.id.fastfoodrating14), findViewById(R.id.fastfoodrating15),
-                findViewById(R.id.fastfoodrating16), findViewById(R.id.fastfoodrating17), findViewById(R.id.fastfoodrating18),
-                findViewById(R.id.fastfoodrating19), findViewById(R.id.fastfoodrating20), findViewById(R.id.fastfoodrating21),
-                findViewById(R.id.fastfoodrating22), findViewById(R.id.fastfoodrating23), findViewById(R.id.fastfoodrating24),
-                findViewById(R.id.fastfoodrating25), findViewById(R.id.fastfoodrating26), findViewById(R.id.fastfoodrating27),
-                findViewById(R.id.fastfoodrating28), findViewById(R.id.fastfoodrating29), findViewById(R.id.fastfoodrating30),
-                findViewById(R.id.fastfoodrating31), findViewById(R.id.fastfoodrating32), findViewById(R.id.fastfoodrating33),
-                findViewById(R.id.fastfoodrating34), findViewById(R.id.fastfoodrating35), findViewById(R.id.fastfoodrating36),
-                findViewById(R.id.fastfoodrating37), findViewById(R.id.fastfoodrating38), findViewById(R.id.fastfoodrating39),
-                findViewById(R.id.fastfoodrating40), findViewById(R.id.fastfoodrating41), findViewById(R.id.fastfoodrating42),
-                findViewById(R.id.fastfoodrating43), findViewById(R.id.fastfoodrating44), findViewById(R.id.fastfoodrating45),
-                findViewById(R.id.fastfoodrating46), findViewById(R.id.fastfoodrating47), findViewById(R.id.fastfoodrating48)
-        };
+    private void rating_array(SQLiteDatabase db, int num, RatingBar[] fastFoodRatings) {
+        for (int i = 0; i < fastFoodRatings.length; i++) {
+            String ratingBarID = "fastfoodrating" + (i + 1); // ID 문자열 생성
+            int resID = getResources().getIdentifier(ratingBarID, "id", getPackageName()); // 리소스 ID 가져오기
+            fastFoodRatings[i] = findViewById(resID); // 배열에 RatingBar 할당
+        }
 
         // "패스트푸드/분식" 분류의 별점 값을 48개 가져오는 쿼리
         String query;
@@ -191,18 +201,20 @@ public class Second5Activity extends AppCompatActivity {
                 }
 
                 // RatingBar에 값 설정
-                if (index < fastfoodRatings.length) {
-                    fastfoodRatings[index].setRating(ratingValue);
+                if (index < fastFoodRatings.length) {
+                    fastFoodRatings[index].setRating(ratingValue);
                 }
                 index++;
             } while (fastfoodratingcursor.moveToNext());
         }
-
+        // 배열에 저장된 값 확인용 Log 출력 (선택 사항)
+        for (int i = 0; i < fastFoodRatings.length; i++) {
+            Log.d("TEL_ARRAY", "별점 " + (i + 1) + ": " + (fastFoodRatings[i]));
+        }
         fastfoodratingcursor.close();
     }
 
-    private void pictures_array(SQLiteDatabase db, int num) {
-        String[] imageUrls = new String[48];  // 이미지 URL을 저장할 배열
+    private void pictures_array(SQLiteDatabase db, int num, String[] imageUrls) {
         Cursor fastfoodimageurlcursor;
 
         // 쿼리 실행
@@ -251,5 +263,101 @@ public class Second5Activity extends AppCompatActivity {
             }
         }
     }
-}
 
+    private void etc_array(SQLiteDatabase db, int num, String[] fastFoodMenus,  String[] fastFoodAddress, String[] fastFoodTel, String[] fastFoodTime) {
+
+        // Cursor 쿼리 실행
+        Cursor fastFoodMenuCursor;
+        if (num == 0) {
+            fastFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' LIMIT 48", null);
+        } else if (num == 1) {
+            fastFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' ORDER BY 거리 ASC LIMIT 48", null);
+        } else {
+            fastFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 48", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (fastFoodMenuCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 48) { // 최대 48개의 값만 처리
+                    String menuValue = fastFoodMenuCursor.getString(0); // 대표메뉴 가져오기
+                    fastFoodMenus[index] = menuValue; // 배열에 저장
+                }
+                index++;
+            } while (fastFoodMenuCursor.moveToNext());
+        }
+        fastFoodMenuCursor.close();
+
+
+        // Cursor 쿼리 실행
+        Cursor fastFoodAddressCursor;
+        if (num == 0) {
+            fastFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' LIMIT 48", null);
+        } else if (num == 1) {
+            fastFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' ORDER BY 거리 ASC LIMIT 48", null);
+        } else {
+            fastFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 48", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (fastFoodAddressCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 48) { // 최대 48개의 값만 처리
+                    String addressValue = fastFoodAddressCursor.getString(0); // 대표메뉴 가져오기
+                    fastFoodAddress[index] = addressValue; // 배열에 저장
+                }
+                index++;
+            } while (fastFoodAddressCursor.moveToNext());
+        }
+        fastFoodAddressCursor.close();
+
+        // Cursor 쿼리 실행
+        Cursor telCursor;
+        if (num == 0) {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' LIMIT 48", null);
+        } else if (num == 1) {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' ORDER BY 거리 ASC LIMIT 48", null);
+        } else {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 48", null);
+        }
+
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (telCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 48) { // 최대 48개의 값만 처리
+                    String telValue = telCursor.getString(0); // 전화번호 가져오기
+                    if (telValue == null || telValue.trim().isEmpty()) {
+                        fastFoodTel[index] = "확인 필요"; // 데이터가 없으면 "확인 필요"로 설정
+                    } else {
+                        fastFoodTel[index] = telValue; // 데이터가 있으면 배열에 저장
+                    }
+                }
+                index++;
+            } while (telCursor.moveToNext());
+        }
+        telCursor.close();
+
+        // Cursor 쿼리 실행
+        Cursor fastFoodTimeCursor;
+        if (num == 0) {
+            fastFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' LIMIT 48", null);
+        } else if (num == 1) {
+            fastFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' ORDER BY 거리 ASC LIMIT 48", null);
+        } else {
+            fastFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '패스트푸드/분식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 48", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (fastFoodTimeCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 48) { // 최대 48개의 값만 처리
+                    String timeValue = fastFoodTimeCursor.getString(0); // 대표메뉴 가져오기
+                    fastFoodTime[index] = timeValue; // 배열에 저장
+                }
+                index++;
+            } while (fastFoodTimeCursor.moveToNext());
+        }
+        fastFoodTimeCursor.close();
+    }
+}

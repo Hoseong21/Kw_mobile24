@@ -8,89 +8,180 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- 상단 이미지 -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="337dp"
-        app:srcCompat="@drawable/f_rice"
-        android:contentDescription="" /> <!-- 접근성을 위한 설명 -->
-
-    <!-- 텍스트 정보 섹션 -->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_weight="1"> <!-- 여백 추가 -->
+        android:layout_weight="1"
+        android:fillViewport="true">
 
-        <!-- NAME과 별점 RatingBar가 나란히 배치 -->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="start|center_vertical"> <!-- 텍스트와 별점 수평 배치 -->
+            android:orientation="vertical">
 
-            <!-- NAME 텍스트 -->
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="337dp"
+                app:srcCompat="@drawable/f_rice"
+                android:contentDescription="" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="광운대김밥"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp" /> <!-- 텍스트와 별점 사이 간격 조정 -->
+                android:orientation="vertical"
+                android:padding="16dp"> <!-- 여백 추가 -->
 
-            <!-- RatingBar (별 5개) -->
-            <RatingBar
-                android:id="@+id/ratingBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:numStars="5"
-                android:rating="4" />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
+                        <TextView
+                            android:id="@+id/nameTextView"
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:maxLines="1"
+                            android:padding="1sp"
+                            android:text="가게 이름"
+                            android:textColor="#000000"
+                            android:textSize="40dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content" />
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:rating="4"
+                            android:scaleX="2"
+                            android:scaleY="2"
+                            android:stepSize="0" />
+                    </TableRow>
+                </TableLayout>
+
+                <!-- 대표 메뉴 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="대표메뉴: "
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/menuTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="메뉴 이름"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <!-- 위치 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="위치: "
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:layout_gravity="top" />
+
+                    <TextView
+                        android:id="@+id/addressTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="주소"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <!-- 전화번호 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="전화번호: "
+                        android:textSize="20sp"
+                        android:textColor="#000000"
+                        android:layout_gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/telTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="0000"
+                        android:textSize="20sp"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <!-- 영업시간 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="영업시간: "
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:layout_gravity="top" />
+
+                    <TextView
+                        android:id="@+id/timeTextView"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="월: \n화: \n수: \n목: \n금: \n토: \n일: "
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
+    </ScrollView>
 
-        <!-- 대표 메뉴 -->
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="대표메뉴:참치김밥, 치즈김밥"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp" />
-
-        <!-- 위치 -->
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="위치:서울특별시 노원구 광운로 20 80주년기념관 내 복지매장"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp" />
-
-        <!-- 전화번호 -->
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="전화번호:02-941-7446"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp" />
-
-        <!-- 영업시간 -->
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="영업시간:9:00~20:00"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp" />
-    </LinearLayout>
-
-    <!-- 하단 버튼 (왼쪽 아래에 배치) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

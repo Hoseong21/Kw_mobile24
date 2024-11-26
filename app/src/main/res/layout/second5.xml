@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true"
             android:background="#cccccc">
@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -163,7 +163,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="5dp">
+        android:padding="1dp">
 
         <Button
             android:id="@+id/btnDis"
@@ -198,7 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <LinearLayout
                     android:id="@+id/btnFast_1"
@@ -222,7 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:padding="5dp"
+                        android:padding="1dp"
                         android:text="사진 없음"
                         android:textColor="#FF0000"
                         android:textSize="12sp"
@@ -241,7 +241,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드1"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -267,7 +267,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btnfast_2"
+                    android:id="@+id/btnFast_2"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -295,7 +295,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드2"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -321,7 +321,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btnfast_3"
+                    android:id="@+id/btnFast_3"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -349,7 +349,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드3"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -379,11 +379,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnfast_4"
+                    android:id="@+id/btnFast_4"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -410,7 +410,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드4"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -437,7 +437,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnfast_5"
+                    android:id="@+id/btnFast_5"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -464,7 +464,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드5"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -491,7 +491,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnfast_6"
+                    android:id="@+id/btnFast_6"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -518,7 +518,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드6"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -549,7 +549,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -584,7 +584,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드7"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -639,7 +639,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드8"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -694,7 +694,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드9"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -722,7 +722,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -757,7 +757,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드10"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -812,7 +812,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드11"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -867,7 +867,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드12"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -895,7 +895,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -930,7 +930,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드13"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -985,7 +985,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드14"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1040,7 +1040,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드15"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1068,7 +1068,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -1103,7 +1103,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드16"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1158,7 +1158,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드17"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1213,7 +1213,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드18"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1241,7 +1241,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -1276,7 +1276,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드19"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1331,7 +1331,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드20"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1386,7 +1386,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드21"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1414,7 +1414,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -1449,7 +1449,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드22"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1504,7 +1504,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드23"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1559,7 +1559,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드24"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1587,7 +1587,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -1622,7 +1622,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드25"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1677,7 +1677,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드26"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1732,7 +1732,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드27"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1760,7 +1760,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -1795,7 +1795,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드28"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1850,7 +1850,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드29"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1905,7 +1905,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드30"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -1933,7 +1933,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <LinearLayout
                     android:id="@+id/btnFast_31"
@@ -1958,7 +1958,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center"
-                        android:padding="5dp"
+                        android:padding="1dp"
                         android:text="사진 없음"
                         android:textColor="#FF0000"
                         android:textSize="12sp"
@@ -1980,7 +1980,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드31"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2035,7 +2035,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드32"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2090,7 +2090,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드33"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2117,7 +2117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -2152,7 +2152,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드34"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2207,7 +2207,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드35"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2262,7 +2262,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드36"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2290,7 +2290,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -2325,7 +2325,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드37"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2380,7 +2380,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드38"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2435,7 +2435,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드39"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2463,7 +2463,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -2498,7 +2498,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드40"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2553,7 +2553,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드41"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2608,7 +2608,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드42"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2636,7 +2636,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -2671,7 +2671,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드43"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2726,7 +2726,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드44"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2781,7 +2781,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드45"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2809,7 +2809,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
@@ -2844,7 +2844,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드46"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2899,7 +2899,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드47"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -2954,7 +2954,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="패스트푸드48"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />

@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -138,7 +138,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true"
             android:background="#cccccc">
@@ -163,7 +163,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="5dp">
+        android:padding="1dp">
 
         <Button
             android:id="@+id/btnDis"
@@ -198,7 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <LinearLayout
                     android:id="@+id/btnCafe_1"
@@ -212,17 +212,17 @@
                     android:focusable="true">
 
                     <ImageView
-                        android:id="@+id/cofepicture1"
+                        android:id="@+id/cafepicture1"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee"/>
 
                     <TextView
-                        android:id="@+id/text_cofe1"
+                        android:id="@+id/text_cafe1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:padding="5dp"
+                        android:padding="1dp"
                         android:text="사진 없음"
                         android:textColor="#FF0000"
                         android:textSize="12sp"
@@ -237,11 +237,11 @@
 
                         <TableRow>
                             <TextView
-                                android:id="@+id/cofename1"
+                                android:id="@+id/cafename1"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페1"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -250,7 +250,7 @@
                                 android:gravity="start" />
 
                             <RatingBar
-                                android:id="@+id/coferating1"
+                                android:id="@+id/caferating1"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -267,7 +267,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btnfast_2"
+                    android:id="@+id/btnCafe_2"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -278,7 +278,7 @@
                     android:focusable="true">
 
                     <ImageView
-                        android:id="@+id/cofepicture2"
+                        android:id="@+id/cafepicture2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee"/>
@@ -291,11 +291,11 @@
 
                         <TableRow>
                             <TextView
-                                android:id="@+id/cofename2"
+                                android:id="@+id/cafename2"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페2"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -304,7 +304,7 @@
                                 android:gravity="start" />
 
                             <RatingBar
-                                android:id="@+id/coferating2"
+                                android:id="@+id/caferating2"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -321,7 +321,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btnfast_3"
+                    android:id="@+id/btnCafe_3"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -332,7 +332,7 @@
                     android:focusable="true">
 
                     <ImageView
-                        android:id="@+id/cofepicture3"
+                        android:id="@+id/cafepicture3"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee"/>
@@ -345,11 +345,11 @@
 
                         <TableRow>
                             <TextView
-                                android:id="@+id/cofename3"
+                                android:id="@+id/cafename3"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페3"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -358,7 +358,7 @@
                                 android:gravity="start" />
 
                             <RatingBar
-                                android:id="@+id/coferating3"
+                                android:id="@+id/caferating3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
@@ -379,11 +379,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnfast_4"
+                    android:id="@+id/btnCafe_4"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -394,7 +394,7 @@
                     android:focusable="true">
 
                     <ImageView
-                        android:id="@+id/cofepicture4"
+                        android:id="@+id/cafepicture4"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -406,11 +406,11 @@
 
                         <TableRow>
                             <TextView
-                                android:id="@+id/cofename4"
+                                android:id="@+id/cafename4"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페4"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -419,7 +419,7 @@
                                 android:gravity="start" />
 
                             <RatingBar
-                                android:id="@+id/coferating4"
+                                android:id="@+id/caferating4"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
@@ -437,7 +437,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnfast_5"
+                    android:id="@+id/btnCafe_5"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -448,7 +448,7 @@
                     android:focusable="true">
 
                     <ImageView
-                        android:id="@+id/cofepicture5"
+                        android:id="@+id/cafepicture5"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -460,11 +460,11 @@
 
                         <TableRow>
                             <TextView
-                                android:id="@+id/cofename5"
+                                android:id="@+id/cafename5"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페5"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -473,7 +473,7 @@
                                 android:gravity="start" />
 
                             <RatingBar
-                                android:id="@+id/coferating5"
+                                android:id="@+id/caferating5"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
@@ -491,7 +491,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnfast_6"
+                    android:id="@+id/btnCafe_6"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -502,7 +502,7 @@
                     android:focusable="true">
 
                     <ImageView
-                        android:id="@+id/cofepicture6"
+                        android:id="@+id/cafepicture6"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -514,11 +514,11 @@
 
                         <TableRow>
                             <TextView
-                                android:id="@+id/cofename6"
+                                android:id="@+id/cafename6"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페6"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -527,7 +527,7 @@
                                 android:gravity="start" />
 
                             <RatingBar
-                                android:id="@+id/coferating6"
+                                android:id="@+id/caferating6"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
@@ -549,11 +549,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_7"
+                    android:id="@+id/btnCafe_7"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -564,7 +564,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture7"
+                        android:id="@+id/cafepicture7"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -577,20 +577,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename7"
+                                android:id="@+id/cafename7"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페7"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating7"
+                                android:id="@+id/caferating7"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -608,7 +608,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_8"
+                    android:id="@+id/btnCafe_8"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -619,7 +619,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture8"
+                        android:id="@+id/cafepicture8"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -632,20 +632,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename8"
+                                android:id="@+id/cafename8"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페8"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating8"
+                                android:id="@+id/caferating8"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -663,7 +663,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_9"
+                    android:id="@+id/btnCafe_9"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -674,7 +674,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture9"
+                        android:id="@+id/cafepicture9"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -687,20 +687,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename9"
+                                android:id="@+id/cafename9"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페9"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating9"
+                                android:id="@+id/caferating9"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -722,11 +722,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_10"
+                    android:id="@+id/btnCafe_10"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -737,7 +737,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture10"
+                        android:id="@+id/cafepicture10"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -748,22 +748,21 @@
                         android:gravity="center">
 
                         <TableRow>
-
                             <TextView
-                                android:id="@+id/cofename10"
+                                android:id="@+id/cafename10"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페10"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating10"
+                                android:id="@+id/caferating10"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -781,7 +780,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_11"
+                    android:id="@+id/btnCafe_11"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -792,7 +791,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture11"
+                        android:id="@+id/cafepicture11"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -805,20 +804,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename11"
+                                android:id="@+id/cafename11"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페11"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating11"
+                                android:id="@+id/caferating11"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -836,7 +835,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_12"
+                    android:id="@+id/btnCafe_12"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -847,7 +846,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture12"
+                        android:id="@+id/cafepicture12"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -860,20 +859,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename12"
+                                android:id="@+id/cafename12"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페12"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating12"
+                                android:id="@+id/caferating12"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -895,11 +894,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_13"
+                    android:id="@+id/btnCafe_13"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -910,7 +909,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture13"
+                        android:id="@+id/cafepicture13"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -923,20 +922,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename13"
+                                android:id="@+id/cafename13"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페13"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating13"
+                                android:id="@+id/caferating13"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -954,7 +953,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_14"
+                    android:id="@+id/btnCafe_14"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -965,7 +964,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture14"
+                        android:id="@+id/cafepicture14"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -978,20 +977,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename14"
+                                android:id="@+id/cafename14"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페14"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating14"
+                                android:id="@+id/caferating14"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1009,7 +1008,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_15"
+                    android:id="@+id/btnCafe_15"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1020,7 +1019,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture15"
+                        android:id="@+id/cafepicture15"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1033,20 +1032,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename15"
+                                android:id="@+id/cafename15"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페15"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating15"
+                                android:id="@+id/caferating15"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1068,11 +1067,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_16"
+                    android:id="@+id/btnCafe_16"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1083,7 +1082,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture16"
+                        android:id="@+id/cafepicture16"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1096,20 +1095,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename16"
+                                android:id="@+id/cafename16"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페16"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating16"
+                                android:id="@+id/caferating16"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1127,7 +1126,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_17"
+                    android:id="@+id/btnCafe_17"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1138,7 +1137,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture17"
+                        android:id="@+id/cafepicture17"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1151,20 +1150,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename17"
+                                android:id="@+id/cafename17"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페17"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating17"
+                                android:id="@+id/caferating17"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1182,7 +1181,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_18"
+                    android:id="@+id/btnCafe_18"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1193,7 +1192,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture18"
+                        android:id="@+id/cafepicture18"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1206,20 +1205,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename18"
+                                android:id="@+id/cafename18"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페18"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating18"
+                                android:id="@+id/caferating18"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1241,11 +1240,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_19"
+                    android:id="@+id/btnCafe_19"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1256,7 +1255,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture19"
+                        android:id="@+id/cafepicture19"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1269,20 +1268,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename19"
+                                android:id="@+id/cafename19"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페19"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating19"
+                                android:id="@+id/caferating19"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1300,7 +1299,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_20"
+                    android:id="@+id/btnCafe_20"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1311,7 +1310,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture20"
+                        android:id="@+id/cafepicture20"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1324,20 +1323,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename20"
+                                android:id="@+id/cafename20"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페20"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating20"
+                                android:id="@+id/caferating20"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1355,7 +1354,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_21"
+                    android:id="@+id/btnCafe_21"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1366,7 +1365,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture21"
+                        android:id="@+id/cafepicture21"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1379,20 +1378,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename21"
+                                android:id="@+id/cafename21"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페21"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating21"
+                                android:id="@+id/caferating21"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1414,11 +1413,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_22"
+                    android:id="@+id/btnCafe_22"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1429,7 +1428,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture22"
+                        android:id="@+id/cafepicture22"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1442,20 +1441,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename22"
+                                android:id="@+id/cafename22"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페22"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating22"
+                                android:id="@+id/caferating22"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1473,7 +1472,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_23"
+                    android:id="@+id/btnCafe_23"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1484,7 +1483,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture23"
+                        android:id="@+id/cafepicture23"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1497,20 +1496,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename23"
+                                android:id="@+id/cafename23"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페23"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating23"
+                                android:id="@+id/caferating23"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1528,7 +1527,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_24"
+                    android:id="@+id/btnCafe_24"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1539,7 +1538,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture24"
+                        android:id="@+id/cafepicture24"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1552,20 +1551,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename24"
+                                android:id="@+id/cafename24"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페24"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating24"
+                                android:id="@+id/caferating24"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1587,11 +1586,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_25"
+                    android:id="@+id/btnCafe_25"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1602,7 +1601,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture25"
+                        android:id="@+id/cafepicture25"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1615,20 +1614,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename25"
+                                android:id="@+id/cafename25"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페25"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating25"
+                                android:id="@+id/caferating25"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1646,7 +1645,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_26"
+                    android:id="@+id/btnCafe_26"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1657,7 +1656,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture26"
+                        android:id="@+id/cafepicture26"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1670,20 +1669,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename26"
+                                android:id="@+id/cafename26"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페26"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating26"
+                                android:id="@+id/caferating26"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1701,7 +1700,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_27"
+                    android:id="@+id/btnCafe_27"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1712,7 +1711,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture27"
+                        android:id="@+id/cafepicture27"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1725,20 +1724,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename27"
+                                android:id="@+id/cafename27"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페27"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating27"
+                                android:id="@+id/caferating27"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1760,11 +1759,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_28"
+                    android:id="@+id/btnCafe_28"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1775,7 +1774,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture28"
+                        android:id="@+id/cafepicture28"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1788,20 +1787,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename28"
+                                android:id="@+id/cafename28"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페28"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating28"
+                                android:id="@+id/caferating28"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1819,7 +1818,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_29"
+                    android:id="@+id/btnCafe_29"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1830,7 +1829,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture29"
+                        android:id="@+id/cafepicture29"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1843,20 +1842,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename29"
+                                android:id="@+id/cafename29"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페29"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating29"
+                                android:id="@+id/caferating29"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"
@@ -1874,7 +1873,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnCofe_30"
+                    android:id="@+id/btnCafe_30"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -1885,7 +1884,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/cofepicture30"
+                        android:id="@+id/cafepicture30"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/f_coffee" />
@@ -1898,20 +1897,20 @@
                         <TableRow>
 
                             <TextView
-                                android:id="@+id/cofename30"
+                                android:id="@+id/cafename30"
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="카페30"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
 
                             <RatingBar
-                                android:id="@+id/coferating30"
+                                android:id="@+id/caferating30"
                                 style="@style/Widget.AppCompat.RatingBar.Small"
                                 android:layout_width="77dp"
                                 android:layout_height="wrap_content"

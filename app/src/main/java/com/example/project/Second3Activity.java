@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -34,15 +35,20 @@ public class Second3Activity extends AppCompatActivity {
         Button btnDis = findViewById(R.id.btnDis);
         Button btnRat = findViewById(R.id.btnRat);
 
-        LinearLayout btnjapan_1 = findViewById(R.id.btnSushi_1);
+        RatingBar[] japanFoodRatings = new RatingBar[13];
+        TextView[] japanFoodNames = new TextView[13];
+        String[] imageUrls = new String[13];
+        String[] japanFoodMenus = new String[13];
+        String[] japanFoodAddress = new String[13];
+        String[] japanFoodTel = new String[13];
+        String[] japanFoodTime = new String[13];
 
-        btnjapan_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Second3Activity.this, third3.class);
-                startActivity(intent);
-            }
-        });
+        LinearLayout[] btnJapan = new LinearLayout[13];
+        for (int i = 1; i <= 13; i++) {
+            String buttonID = "btnJapan_" + i; // 동적 ID 생성
+            int resID = getResources().getIdentifier(buttonID, "id", getPackageName()); // 리소스 ID 가져오기
+            btnJapan[i - 1] = findViewById(resID); // 배열에 할당
+        }
 
         // 한식 버튼 클릭 이벤트
         btnRice2.setOnClickListener(new View.OnClickListener() {
@@ -92,27 +98,44 @@ public class Second3Activity extends AppCompatActivity {
         btnDis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_array(db, 1);
-                rating_array(db, 1);
-                pictures_array(db, 1);
+                name_array(db, 1, japanFoodNames);
+                rating_array(db, 1, japanFoodRatings);
+                pictures_array(db, 1, imageUrls);
+                etc_array(db, 1, japanFoodMenus, japanFoodAddress, japanFoodTel, japanFoodTime);
             }
         });
         // 별점순 버튼 클릭 이벤트
         btnRat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_array(db, 2);
-                rating_array(db, 2);
-                pictures_array(db, 2);
+                name_array(db, 2, japanFoodNames);
+                rating_array(db, 2, japanFoodRatings);
+                pictures_array(db, 2, imageUrls);
+                etc_array(db, 2, japanFoodMenus, japanFoodAddress, japanFoodTel, japanFoodTime);
             }
         });
-        name_array(db, 0);
-        rating_array(db, 0);
-        pictures_array(db, 0);
+        for (int i = 0; i < btnJapan.length; i++) {
+            final int index = i;  // i 값을 final로 선언하여 Intent에서 사용할 수 있도록 함
+            btnJapan[i].setOnClickListener(v -> {
+                Intent intent = new Intent(Second3Activity.this, ThirdActivity.class);
+                intent.putExtra("foodTel", japanFoodTel[index]);
+                intent.putExtra("foodTime", japanFoodTime[index]);
+                intent.putExtra("foodAddress", japanFoodAddress[index]);
+                intent.putExtra("foodMenus", japanFoodMenus[index]);
+                intent.putExtra("imageUrls", imageUrls[index]);
+                intent.putExtra("foodRatings", japanFoodRatings[index].getRating());
+                intent.putExtra("foodNames", japanFoodNames[index].getText().toString());
+
+                startActivity(intent);
+            });
+        }
+
+        name_array(db, 0, japanFoodNames);
+        rating_array(db, 0, japanFoodRatings);
+        pictures_array(db, 0, imageUrls);
+        etc_array(db, 0, japanFoodMenus, japanFoodAddress, japanFoodTel, japanFoodTime);
     }
-    private void name_array(SQLiteDatabase db, int num) {
-        // TextView 배열 생성
-        TextView[] japanFoodNames = new TextView[13];
+    private void name_array(SQLiteDatabase db, int num, TextView[] japanFoodNames) {
         for (int i = 0; i < 13; i++) {
             String textViewID = "japanfoodname" + (i + 1); // ID 문자열 생성
             int resID = getResources().getIdentifier(textViewID, "id", getPackageName());
@@ -143,15 +166,12 @@ public class Second3Activity extends AppCompatActivity {
         japanfoodnamecursor.close();
     }
 
-    private void rating_array(SQLiteDatabase db, int num) {
-        // RatingBar 배열 선언
-        RatingBar[] japanfoodRatings = {
-                findViewById(R.id.japanfoodrating1), findViewById(R.id.japanfoodrating2), findViewById(R.id.japanfoodrating3),
-                findViewById(R.id.japanfoodrating4), findViewById(R.id.japanfoodrating5), findViewById(R.id.japanfoodrating6),
-                findViewById(R.id.japanfoodrating7), findViewById(R.id.japanfoodrating8), findViewById(R.id.japanfoodrating9),
-                findViewById(R.id.japanfoodrating10), findViewById(R.id.japanfoodrating11), findViewById(R.id.japanfoodrating12),
-                findViewById(R.id.japanfoodrating13)
-        };
+    private void rating_array(SQLiteDatabase db, int num, RatingBar[] japanFoodRatings) {
+        for (int i = 0; i < japanFoodRatings.length; i++) {
+            String ratingBarID = "japanfoodrating" + (i + 1); // ID 문자열 생성
+            int resID = getResources().getIdentifier(ratingBarID, "id", getPackageName()); // 리소스 ID 가져오기
+            japanFoodRatings[i] = findViewById(resID); // 배열에 RatingBar 할당
+        }
 
         // "일식" 분류의 별점 값을 13개 가져오는 쿼리
         String query;
@@ -181,18 +201,20 @@ public class Second3Activity extends AppCompatActivity {
                 }
 
                 // RatingBar에 값 설정
-                if (index < japanfoodRatings.length) {
-                    japanfoodRatings[index].setRating(ratingValue);
+                if (index < japanFoodRatings.length) {
+                    japanFoodRatings[index].setRating(ratingValue);
                 }
                 index++;
             } while (japanfoodratingcursor.moveToNext());
         }
-
+        // 배열에 저장된 값 확인용 Log 출력 (선택 사항)
+        for (int i = 0; i < japanFoodRatings.length; i++) {
+            Log.d("TEL_ARRAY", "별점 " + (i + 1) + ": " + (japanFoodRatings[i]));
+        }
         japanfoodratingcursor.close();
     }
 
-    private void pictures_array(SQLiteDatabase db, int num) {
-        String[] imageUrls = new String[13];  // 이미지 URL을 저장할 배열
+    private void pictures_array(SQLiteDatabase db, int num, String[] imageUrls) {
         Cursor japanfoodimageurlcursor;
 
         // 쿼리 실행
@@ -233,5 +255,102 @@ public class Second3Activity extends AppCompatActivity {
                         .into(imageView);
             }
         }
+    }
+
+    private void etc_array(SQLiteDatabase db, int num, String[] japanFoodMenus,  String[] japanFoodAddress, String[] japanFoodTel, String[] japanFoodTime) {
+
+        // Cursor 쿼리 실행
+        Cursor japanFoodMenuCursor;
+        if (num == 0) {
+            japanFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '일식' LIMIT 13", null);
+        } else if (num == 1) {
+            japanFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '일식' ORDER BY 거리 ASC LIMIT 13", null);
+        } else {
+            japanFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '일식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 13", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (japanFoodMenuCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 13) { // 최대 13개의 값만 처리
+                    String menuValue = japanFoodMenuCursor.getString(0); // 대표메뉴 가져오기
+                    japanFoodMenus[index] = menuValue; // 배열에 저장
+                }
+                index++;
+            } while (japanFoodMenuCursor.moveToNext());
+        }
+        japanFoodMenuCursor.close();
+
+
+        // Cursor 쿼리 실행
+        Cursor japanFoodAddressCursor;
+        if (num == 0) {
+            japanFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '일식' LIMIT 13", null);
+        } else if (num == 1) {
+            japanFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '일식' ORDER BY 거리 ASC LIMIT 13", null);
+        } else {
+            japanFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '일식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 13", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (japanFoodAddressCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 13) { // 최대 13개의 값만 처리
+                    String addressValue = japanFoodAddressCursor.getString(0); // 대표메뉴 가져오기
+                    japanFoodAddress[index] = addressValue; // 배열에 저장
+                }
+                index++;
+            } while (japanFoodAddressCursor.moveToNext());
+        }
+        japanFoodAddressCursor.close();
+
+        // Cursor 쿼리 실행
+        Cursor telCursor;
+        if (num == 0) {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '일식' LIMIT 13", null);
+        } else if (num == 1) {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '일식' ORDER BY 거리 ASC LIMIT 13", null);
+        } else {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '일식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 13", null);
+        }
+
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (telCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 13) { // 최대 13개의 값만 처리
+                    String telValue = telCursor.getString(0); // 전화번호 가져오기
+                    if (telValue == null || telValue.trim().isEmpty()) {
+                        japanFoodTel[index] = "확인 필요"; // 데이터가 없으면 "확인 필요"로 설정
+                    } else {
+                        japanFoodTel[index] = telValue; // 데이터가 있으면 배열에 저장
+                    }
+                }
+                index++;
+            } while (telCursor.moveToNext());
+        }
+        telCursor.close();
+
+        // Cursor 쿼리 실행
+        Cursor japanFoodTimeCursor;
+        if (num == 0) {
+            japanFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '일식' LIMIT 13", null);
+        } else if (num == 1) {
+            japanFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '일식' ORDER BY 거리 ASC LIMIT 13", null);
+        } else {
+            japanFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '일식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 13", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (japanFoodTimeCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 13) { // 최대 13개의 값만 처리
+                    String timeValue = japanFoodTimeCursor.getString(0); // 대표메뉴 가져오기
+                    japanFoodTime[index] = timeValue; // 배열에 저장
+                }
+                index++;
+            } while (japanFoodTimeCursor.moveToNext());
+        }
+        japanFoodTimeCursor.close();
     }
 }

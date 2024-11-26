@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true"
             android:background="#cccccc">
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -139,7 +139,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="5dp"
+            android:padding="1dp"
             android:clickable="true"
             android:focusable="true">
 
@@ -163,7 +163,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="5dp">
+        android:padding="1dp">
 
         <Button
             android:id="@+id/btnDis"
@@ -198,10 +198,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <LinearLayout
-                    android:id="@+id/btnSushi_1"
+                    android:id="@+id/btnJapan_1"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -222,7 +222,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:padding="5dp"
+                        android:padding="1dp"
                         android:text="사진 없음"
                         android:textColor="#FF0000"
                         android:textSize="12sp"
@@ -241,7 +241,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식1"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -267,7 +267,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btnjapan_2"
+                    android:id="@+id/btnJapan_2"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -295,7 +295,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식2"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -321,7 +321,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/btnjapan_3"
+                    android:id="@+id/btnJapan_3"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -349,7 +349,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식3"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -379,11 +379,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_4"
+                    android:id="@+id/btnJapan_4"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -410,7 +410,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식4"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -437,7 +437,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_5"
+                    android:id="@+id/btnJapan_5"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -464,7 +464,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식5"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -491,7 +491,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_6"
+                    android:id="@+id/btnJapan_6"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:orientation="vertical"
@@ -518,7 +518,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식6"
                                 android:textColor="#000000"
                                 android:textSize="11dp"
@@ -549,11 +549,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_7"
+                    android:id="@+id/btnJapan_7"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -584,7 +584,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식7"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -608,7 +608,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_8"
+                    android:id="@+id/btnJapan_8"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -639,7 +639,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식8"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -663,7 +663,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_9"
+                    android:id="@+id/btnJapan_9"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -694,7 +694,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식9"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -722,11 +722,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_10"
+                    android:id="@+id/btnJapan_10"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -757,7 +757,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식10"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -781,7 +781,7 @@
 
                 <!-- 두 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_11"
+                    android:id="@+id/btnJapan_11"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -812,7 +812,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식11"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -836,7 +836,7 @@
 
                 <!-- 세 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_12"
+                    android:id="@+id/btnJapan_12"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -867,7 +867,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식12"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />
@@ -895,11 +895,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="1dp">
 
                 <!-- 첫 번째 추가 아이템 -->
                 <LinearLayout
-                    android:id="@+id/btnjapan_13"
+                    android:id="@+id/btnJapan_13"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_margin="1dp"
@@ -930,7 +930,7 @@
                                 android:ellipsize="end"
                                 android:gravity="start"
                                 android:maxLines="1"
-                                android:padding="5dp"
+                                android:padding="1dp"
                                 android:text="일식13"
                                 android:textColor="#000000"
                                 android:textSize="11dp" />

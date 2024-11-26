@@ -1,6 +1,5 @@
 package com.example.project;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -37,18 +36,20 @@ public class SecondActivity extends AppCompatActivity {
         Button btnDis = findViewById(R.id.btnDis);
         Button btnRat = findViewById(R.id.btnRat);
 
+        RatingBar[] koreanFoodRatings = new RatingBar[51];
+        TextView[] koreanFoodNames = new TextView[51];
+        String[] imageUrls = new String[51];
+        String[] koreanFoodMenus = new String[51];
+        String[] koreanFoodAddress = new String[51];
+        String[] koreanFoodTel = new String[51];
+        String[] koreanFoodTime = new String[51];
 
-        LinearLayout btnRice_1 = findViewById(R.id.btnRice_1);
-
-
-        btnRice_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SecondActivity.this, third.class);
-                startActivity(intent);
-            }
-        });
-
+        LinearLayout[] btnRice = new LinearLayout[51];
+        for (int i = 1; i <= 51; i++) {
+            String buttonID = "btnRice_" + i; // 동적 ID 생성
+            int resID = getResources().getIdentifier(buttonID, "id", getPackageName()); // 리소스 ID 가져오기
+            btnRice[i - 1] = findViewById(resID); // 배열에 할당
+        }
 
         // 중식 버튼 클릭 이벤트
         btnChina2.setOnClickListener(new View.OnClickListener() {
@@ -99,28 +100,45 @@ public class SecondActivity extends AppCompatActivity {
         btnDis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_array(db, 1);
-                rating_array(db, 1);
-                pictures_array(db, 1);
+                name_array(db, 1, koreanFoodNames);
+                rating_array(db, 1, koreanFoodRatings);
+                pictures_array(db, 1, imageUrls);
+                etc_array(db, 1, koreanFoodMenus, koreanFoodAddress, koreanFoodTel, koreanFoodTime);
             }
         });
         // 별점순 버튼 클릭 이벤트
         btnRat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_array(db, 2);
-                rating_array(db, 2);
-                pictures_array(db, 2);
+                name_array(db, 2, koreanFoodNames);
+                rating_array(db, 2, koreanFoodRatings);
+                pictures_array(db, 2, imageUrls);
+                etc_array(db, 2, koreanFoodMenus, koreanFoodAddress, koreanFoodTel, koreanFoodTime);
             }
         });
+        for (int i = 0; i < btnRice.length; i++) {
+            final int index = i;  // i 값을 final로 선언하여 Intent에서 사용할 수 있도록 함
+            btnRice[i].setOnClickListener(v -> {
+                Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+                intent.putExtra("foodTel", koreanFoodTel[index]);
+                intent.putExtra("foodTime", koreanFoodTime[index]);
+                intent.putExtra("foodAddress", koreanFoodAddress[index]);
+                intent.putExtra("foodMenus", koreanFoodMenus[index]);
+                intent.putExtra("imageUrls", imageUrls[index]);
+                intent.putExtra("foodRatings", koreanFoodRatings[index].getRating());
+                intent.putExtra("foodNames", koreanFoodNames[index].getText().toString());
 
-        name_array(db, 0);
-        rating_array(db, 0);
-        pictures_array(db, 0);
+                startActivity(intent);
+            });
+        }
+
+        name_array(db, 0, koreanFoodNames);
+        rating_array(db, 0, koreanFoodRatings);
+        pictures_array(db, 0, imageUrls);
+        etc_array(db, 0, koreanFoodMenus, koreanFoodAddress, koreanFoodTel, koreanFoodTime);
     }
-    private void name_array(SQLiteDatabase db, int num) {
-        // TextView 배열 생성
-        TextView[] koreanFoodNames = new TextView[51];
+
+    private void name_array(SQLiteDatabase db, int num, TextView[] koreanFoodNames) {
         for (int i = 0; i < 51; i++) {
             String textViewID = "koreanfoodname" + (i + 1); // ID 문자열 생성
             int resID = getResources().getIdentifier(textViewID, "id", getPackageName());
@@ -151,27 +169,12 @@ public class SecondActivity extends AppCompatActivity {
         koreanfoodnamecursor.close();
     }
 
-    private void rating_array(SQLiteDatabase db, int num) {
-        // RatingBar 배열 선언
-        RatingBar[] koreanfoodRatings = {
-                findViewById(R.id.koreanfoodrating1), findViewById(R.id.koreanfoodrating2), findViewById(R.id.koreanfoodrating3),
-                findViewById(R.id.koreanfoodrating4), findViewById(R.id.koreanfoodrating5), findViewById(R.id.koreanfoodrating6),
-                findViewById(R.id.koreanfoodrating7), findViewById(R.id.koreanfoodrating8), findViewById(R.id.koreanfoodrating9),
-                findViewById(R.id.koreanfoodrating10), findViewById(R.id.koreanfoodrating11), findViewById(R.id.koreanfoodrating12),
-                findViewById(R.id.koreanfoodrating13), findViewById(R.id.koreanfoodrating14), findViewById(R.id.koreanfoodrating15),
-                findViewById(R.id.koreanfoodrating16), findViewById(R.id.koreanfoodrating17), findViewById(R.id.koreanfoodrating18),
-                findViewById(R.id.koreanfoodrating19), findViewById(R.id.koreanfoodrating20), findViewById(R.id.koreanfoodrating21),
-                findViewById(R.id.koreanfoodrating22), findViewById(R.id.koreanfoodrating23), findViewById(R.id.koreanfoodrating24),
-                findViewById(R.id.koreanfoodrating25), findViewById(R.id.koreanfoodrating26), findViewById(R.id.koreanfoodrating27),
-                findViewById(R.id.koreanfoodrating28), findViewById(R.id.koreanfoodrating29), findViewById(R.id.koreanfoodrating30),
-                findViewById(R.id.koreanfoodrating31), findViewById(R.id.koreanfoodrating32), findViewById(R.id.koreanfoodrating33),
-                findViewById(R.id.koreanfoodrating34), findViewById(R.id.koreanfoodrating35), findViewById(R.id.koreanfoodrating36),
-                findViewById(R.id.koreanfoodrating37), findViewById(R.id.koreanfoodrating38), findViewById(R.id.koreanfoodrating39),
-                findViewById(R.id.koreanfoodrating40), findViewById(R.id.koreanfoodrating41), findViewById(R.id.koreanfoodrating42),
-                findViewById(R.id.koreanfoodrating43), findViewById(R.id.koreanfoodrating44), findViewById(R.id.koreanfoodrating45),
-                findViewById(R.id.koreanfoodrating46), findViewById(R.id.koreanfoodrating47), findViewById(R.id.koreanfoodrating48),
-                findViewById(R.id.koreanfoodrating49), findViewById(R.id.koreanfoodrating50), findViewById(R.id.koreanfoodrating51)
-        };
+    private void rating_array(SQLiteDatabase db, int num, RatingBar[] koreanFoodRatings) {
+        for (int i = 0; i < koreanFoodRatings.length; i++) {
+            String ratingBarID = "koreanfoodrating" + (i + 1); // ID 문자열 생성
+            int resID = getResources().getIdentifier(ratingBarID, "id", getPackageName()); // 리소스 ID 가져오기
+            koreanFoodRatings[i] = findViewById(resID); // 배열에 RatingBar 할당
+        }
 
         // "한식" 분류의 별점 값을 51개 가져오는 쿼리
         String query;
@@ -201,18 +204,20 @@ public class SecondActivity extends AppCompatActivity {
                 }
 
                 // RatingBar에 값 설정
-                if (index < koreanfoodRatings.length) {
-                    koreanfoodRatings[index].setRating(ratingValue);
+                if (index < koreanFoodRatings.length) {
+                    koreanFoodRatings[index].setRating(ratingValue);
                 }
                 index++;
             } while (koreanfoodratingcursor.moveToNext());
         }
-
+        // 배열에 저장된 값 확인용 Log 출력 (선택 사항)
+        for (int i = 0; i < koreanFoodRatings.length; i++) {
+            Log.d("TEL_ARRAY", "별점 " + (i + 1) + ": " + (koreanFoodRatings[i]));
+        }
         koreanfoodratingcursor.close();
     }
 
-    private void pictures_array(SQLiteDatabase db, int num) {
-        String[] imageUrls = new String[51];  // 이미지 URL을 저장할 배열
+    private void pictures_array(SQLiteDatabase db, int num, String[] imageUrls) {
         Cursor koreanfoodimageurlcursor;
 
         // 쿼리 실행
@@ -262,4 +267,100 @@ public class SecondActivity extends AppCompatActivity {
         }
     }
 
+    private void etc_array(SQLiteDatabase db, int num, String[] koreanFoodMenus,  String[] koreanFoodAddress, String[] koreanFoodTel, String[] koreanFoodTime) {
+
+        // Cursor 쿼리 실행
+        Cursor koreanFoodMenuCursor;
+        if (num == 0) {
+            koreanFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '한식' LIMIT 51", null);
+        } else if (num == 1) {
+            koreanFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '한식' ORDER BY 거리 ASC LIMIT 51", null);
+        } else {
+            koreanFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '한식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 51", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (koreanFoodMenuCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 51) { // 최대 51개의 값만 처리
+                    String menuValue = koreanFoodMenuCursor.getString(0); // 대표메뉴 가져오기
+                    koreanFoodMenus[index] = menuValue; // 배열에 저장
+                }
+                index++;
+            } while (koreanFoodMenuCursor.moveToNext());
+        }
+        koreanFoodMenuCursor.close();
+
+
+        // Cursor 쿼리 실행
+        Cursor koreanFoodAddressCursor;
+        if (num == 0) {
+            koreanFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '한식' LIMIT 51", null);
+        } else if (num == 1) {
+            koreanFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '한식' ORDER BY 거리 ASC LIMIT 51", null);
+        } else {
+            koreanFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '한식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 51", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (koreanFoodAddressCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 51) { // 최대 51개의 값만 처리
+                    String addressValue = koreanFoodAddressCursor.getString(0); // 대표메뉴 가져오기
+                    koreanFoodAddress[index] = addressValue; // 배열에 저장
+                }
+                index++;
+            } while (koreanFoodAddressCursor.moveToNext());
+        }
+        koreanFoodAddressCursor.close();
+
+        // Cursor 쿼리 실행
+        Cursor telCursor;
+        if (num == 0) {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '한식' LIMIT 51", null);
+        } else if (num == 1) {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '한식' ORDER BY 거리 ASC LIMIT 51", null);
+        } else {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '한식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 51", null);
+        }
+
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (telCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 51) { // 최대 51개의 값만 처리
+                    String telValue = telCursor.getString(0); // 전화번호 가져오기
+                    if (telValue == null || telValue.trim().isEmpty()) {
+                        koreanFoodTel[index] = "확인 필요"; // 데이터가 없으면 "확인 필요"로 설정
+                    } else {
+                        koreanFoodTel[index] = telValue; // 데이터가 있으면 배열에 저장
+                    }
+                }
+                index++;
+            } while (telCursor.moveToNext());
+        }
+        telCursor.close();
+
+        // Cursor 쿼리 실행
+        Cursor koreanFoodTimeCursor;
+        if (num == 0) {
+            koreanFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '한식' LIMIT 51", null);
+        } else if (num == 1) {
+            koreanFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '한식' ORDER BY 거리 ASC LIMIT 51", null);
+        } else {
+            koreanFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '한식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 51", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (koreanFoodTimeCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 51) { // 최대 51개의 값만 처리
+                    String timeValue = koreanFoodTimeCursor.getString(0); // 대표메뉴 가져오기
+                    koreanFoodTime[index] = timeValue; // 배열에 저장
+                }
+                index++;
+            } while (koreanFoodTimeCursor.moveToNext());
+        }
+        koreanFoodTimeCursor.close();
+    }
 }

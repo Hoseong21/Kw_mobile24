@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,28 +27,31 @@ public class Second2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second2);
 
-        LinearLayout btnRice2 = findViewById(R.id.btnRice2);
+        LinearLayout btnChina2 = findViewById(R.id.btnChina2);
         LinearLayout btnSushi2 = findViewById(R.id.btnSushi2);
         LinearLayout btnSteak2 = findViewById(R.id.btnSteak2);
         LinearLayout btnFast2 = findViewById(R.id.btnFast2);
         LinearLayout btnCafe2 = findViewById(R.id.btnCafe2);
         Button btnDis = findViewById(R.id.btnDis);
         Button btnRat = findViewById(R.id.btnRat);
+        
+        RatingBar[] chinaFoodRatings = new RatingBar[14];
+        TextView[] chinaFoodNames = new TextView[14];
+        String[] imageUrls = new String[14];
+        String[] chinaFoodMenus = new String[14];
+        String[] chinaFoodAddress = new String[14];
+        String[] chinaFoodTel = new String[14];
+        String[] chinaFoodTime = new String[14];
 
-        LinearLayout btnChina_1 = findViewById(R.id.btnChina_1);
-
-        btnChina_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Second2Activity.this, third2.class);
-                startActivity(intent);
-            }
-        });
-
-
+        LinearLayout[] btnChina = new LinearLayout[14];
+        for (int i = 1; i <= 14; i++) {
+            String buttonID = "btnChina_" + i; // 동적 ID 생성
+            int resID = getResources().getIdentifier(buttonID, "id", getPackageName()); // 리소스 ID 가져오기
+            btnChina[i - 1] = findViewById(resID); // 배열에 할당
+        }
 
         // 중식 버튼 클릭 이벤트
-        btnRice2.setOnClickListener(new View.OnClickListener() {
+        btnChina2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Second2Activity.this, SecondActivity.class);
@@ -94,27 +98,43 @@ public class Second2Activity extends AppCompatActivity {
         btnDis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_array(db, 1);
-                rating_array(db, 1);
-                pictures_array(db, 1);
+                name_array(db, 1, chinaFoodNames);
+                rating_array(db, 1, chinaFoodRatings);
+                pictures_array(db, 1, imageUrls);
+                etc_array(db, 1, chinaFoodMenus, chinaFoodAddress, chinaFoodTel, chinaFoodTime);
             }
         });
         // 별점순 버튼 클릭 이벤트
         btnRat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                name_array(db, 2);
-                rating_array(db, 2);
-                pictures_array(db, 2);
+                name_array(db, 2, chinaFoodNames);
+                rating_array(db, 2, chinaFoodRatings);
+                pictures_array(db, 2, imageUrls);
+                etc_array(db, 2, chinaFoodMenus, chinaFoodAddress, chinaFoodTel, chinaFoodTime);
             }
-        });
-        name_array(db, 0);
-        rating_array(db, 0);
-        pictures_array(db, 0);
+        });        
+        for (int i = 0; i < btnChina.length; i++) {
+            final int index = i;  // i 값을 final로 선언하여 Intent에서 사용할 수 있도록 함
+            btnChina[i].setOnClickListener(v -> {
+                Intent intent = new Intent(Second2Activity.this, ThirdActivity.class);
+                intent.putExtra("foodTel", chinaFoodTel[index]);
+                intent.putExtra("foodTime", chinaFoodTime[index]);
+                intent.putExtra("foodAddress", chinaFoodAddress[index]);
+                intent.putExtra("foodMenus", chinaFoodMenus[index]);
+                intent.putExtra("imageUrls", imageUrls[index]);
+                intent.putExtra("foodRatings", chinaFoodRatings[index].getRating());
+                intent.putExtra("foodNames", chinaFoodNames[index].getText().toString());
+
+                startActivity(intent);
+            });
+        }
+        name_array(db, 0, chinaFoodNames);
+        rating_array(db, 0, chinaFoodRatings);
+        pictures_array(db, 0, imageUrls);
+        etc_array(db, 0, chinaFoodMenus, chinaFoodAddress, chinaFoodTel, chinaFoodTime);
     }
-    private void name_array(SQLiteDatabase db, int num) {
-        // TextView 배열 생성
-        TextView[] chinaFoodNames = new TextView[14];
+    private void name_array(SQLiteDatabase db, int num, TextView[] chinaFoodNames) {
         for (int i = 0; i < 14; i++) {
             String textViewID = "chinafoodname" + (i + 1); // ID 문자열 생성
             int resID = getResources().getIdentifier(textViewID, "id", getPackageName());
@@ -145,15 +165,12 @@ public class Second2Activity extends AppCompatActivity {
         chinafoodnamecursor.close();
     }
 
-    private void rating_array(SQLiteDatabase db, int num) {
-        // RatingBar 배열 선언
-        RatingBar[] chinafoodRatings = {
-                findViewById(R.id.chinafoodrating1), findViewById(R.id.chinafoodrating2), findViewById(R.id.chinafoodrating3),
-                findViewById(R.id.chinafoodrating4), findViewById(R.id.chinafoodrating5), findViewById(R.id.chinafoodrating6),
-                findViewById(R.id.chinafoodrating7), findViewById(R.id.chinafoodrating8), findViewById(R.id.chinafoodrating9),
-                findViewById(R.id.chinafoodrating10), findViewById(R.id.chinafoodrating11), findViewById(R.id.chinafoodrating12),
-                findViewById(R.id.chinafoodrating13), findViewById(R.id.chinafoodrating14)
-        };
+    private void rating_array(SQLiteDatabase db, int num, RatingBar[] chinaFoodRatings) {
+        for (int i = 0; i < chinaFoodRatings.length; i++) {
+            String ratingBarID = "chinafoodrating" + (i + 1); // ID 문자열 생성
+            int resID = getResources().getIdentifier(ratingBarID, "id", getPackageName()); // 리소스 ID 가져오기
+            chinaFoodRatings[i] = findViewById(resID); // 배열에 RatingBar 할당
+        }
 
         // "중식" 분류의 별점 값을 14개 가져오는 쿼리
         String query;
@@ -183,18 +200,20 @@ public class Second2Activity extends AppCompatActivity {
                 }
 
                 // RatingBar에 값 설정
-                if (index < chinafoodRatings.length) {
-                    chinafoodRatings[index].setRating(ratingValue);
+                if (index < chinaFoodRatings.length) {
+                    chinaFoodRatings[index].setRating(ratingValue);
                 }
                 index++;
             } while (chinafoodratingcursor.moveToNext());
         }
-
+        // 배열에 저장된 값 확인용 Log 출력 (선택 사항)
+        for (int i = 0; i < chinaFoodRatings.length; i++) {
+            Log.d("TEL_ARRAY", "별점 " + (i + 1) + ": " + (chinaFoodRatings[i]));
+        }
         chinafoodratingcursor.close();
     }
 
-    private void pictures_array(SQLiteDatabase db, int num) {
-        String[] imageUrls = new String[14];  // 이미지 URL을 저장할 배열
+    private void pictures_array(SQLiteDatabase db, int num, String[] imageUrls) {
         Cursor chinafoodimageurlcursor;
 
         // 쿼리 실행
@@ -235,5 +254,103 @@ public class Second2Activity extends AppCompatActivity {
                         .into(imageView);
             }
         }
+    }
+
+
+    private void etc_array(SQLiteDatabase db, int num, String[] chinaFoodMenus,  String[] chinaFoodAddress, String[] chinaFoodTel, String[] chinaFoodTime) {
+
+        // Cursor 쿼리 실행
+        Cursor chinaFoodMenuCursor;
+        if (num == 0) {
+            chinaFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '중식' LIMIT 14", null);
+        } else if (num == 1) {
+            chinaFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '중식' ORDER BY 거리 ASC LIMIT 14", null);
+        } else {
+            chinaFoodMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '중식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 14", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (chinaFoodMenuCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 14) { // 최대 14개의 값만 처리
+                    String menuValue = chinaFoodMenuCursor.getString(0); // 대표메뉴 가져오기
+                    chinaFoodMenus[index] = menuValue; // 배열에 저장
+                }
+                index++;
+            } while (chinaFoodMenuCursor.moveToNext());
+        }
+        chinaFoodMenuCursor.close();
+
+
+        // Cursor 쿼리 실행
+        Cursor chinaFoodAddressCursor;
+        if (num == 0) {
+            chinaFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '중식' LIMIT 14", null);
+        } else if (num == 1) {
+            chinaFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '중식' ORDER BY 거리 ASC LIMIT 14", null);
+        } else {
+            chinaFoodAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '중식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 14", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (chinaFoodAddressCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 14) { // 최대 14개의 값만 처리
+                    String addressValue = chinaFoodAddressCursor.getString(0); // 대표메뉴 가져오기
+                    chinaFoodAddress[index] = addressValue; // 배열에 저장
+                }
+                index++;
+            } while (chinaFoodAddressCursor.moveToNext());
+        }
+        chinaFoodAddressCursor.close();
+
+        // Cursor 쿼리 실행
+        Cursor telCursor;
+        if (num == 0) {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '중식' LIMIT 14", null);
+        } else if (num == 1) {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '중식' ORDER BY 거리 ASC LIMIT 14", null);
+        } else {
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '중식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 14", null);
+        }
+
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (telCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 14) { // 최대 14개의 값만 처리
+                    String telValue = telCursor.getString(0); // 전화번호 가져오기
+                    if (telValue == null || telValue.trim().isEmpty()) {
+                        chinaFoodTel[index] = "확인 필요"; // 데이터가 없으면 "확인 필요"로 설정
+                    } else {
+                        chinaFoodTel[index] = telValue; // 데이터가 있으면 배열에 저장
+                    }
+                }
+                index++;
+            } while (telCursor.moveToNext());
+        }
+        telCursor.close();
+
+        // Cursor 쿼리 실행
+        Cursor chinaFoodTimeCursor;
+        if (num == 0) {
+            chinaFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '중식' LIMIT 14", null);
+        } else if (num == 1) {
+            chinaFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '중식' ORDER BY 거리 ASC LIMIT 14", null);
+        } else {
+            chinaFoodTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '중식' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 14", null);
+        }
+        // Cursor로 데이터를 가져와 배열에 저장
+        if (chinaFoodTimeCursor.moveToFirst()) {
+            int index = 0;
+            do {
+                if (index < 14) { // 최대 14개의 값만 처리
+                    String timeValue = chinaFoodTimeCursor.getString(0); // 대표메뉴 가져오기
+                    chinaFoodTime[index] = timeValue; // 배열에 저장
+                }
+                index++;
+            } while (chinaFoodTimeCursor.moveToNext());
+        }
+        chinaFoodTimeCursor.close();
     }
 }
