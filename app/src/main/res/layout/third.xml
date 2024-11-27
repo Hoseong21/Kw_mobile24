@@ -23,6 +23,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="337dp"
+                android:paddingTop="25dp"
                 app:srcCompat="@drawable/f_rice"
                 android:contentDescription="" />
 
@@ -50,9 +51,10 @@
                             android:gravity="start"
                             android:maxLines="1"
                             android:padding="1sp"
+                            android:layout_marginEnd="3dp"
                             android:text="가게 이름"
                             android:textColor="#000000"
-                            android:textSize="40dp"
+                            android:textSize="30dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -170,7 +172,7 @@
 
                     <TextView
                         android:id="@+id/timeTextView"
-                        android:layout_width="120dp"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:text="월: \n화: \n수: \n목: \n금: \n토: \n일: "
