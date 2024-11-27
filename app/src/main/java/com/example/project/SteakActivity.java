@@ -3,6 +3,8 @@ package com.example.project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+// Java
+import androidx.gridlayout.widget.GridLayout;
 
 public class SteakActivity extends AppCompatActivity {
 

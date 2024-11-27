@@ -3,17 +3,15 @@ package com.example.project;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.RotateAnimation;
-
 import androidx.core.content.ContextCompat;
-
 import java.util.List;
 
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
+;
 public class CustomRouletteView extends View {
 
     private float centerX;  // 뷰의 중심 X 좌표
@@ -23,8 +21,11 @@ public class CustomRouletteView extends View {
     private Paint fillPaint = new Paint();  // 섹션 색상 페인트
     private Paint textPaint = new Paint();  // 텍스트 페인트
     private Paint arrowPaint = new Paint(); // 화살표 페인트
-    private RotateListener rotateListener;  // 회전 이벤트 콜백
-    private long rotateDuration = 2000;     // 기본 회전 지속 시간: 2초
+    private RotateListener rotateListener; // 회전 이벤트 콜백
+    private long rotateDuration = 2000; // 기본 회전 지속 시간: 2초
+
+
+
 
     public CustomRouletteView(Context context) {
         super(context);
@@ -52,6 +53,7 @@ public class CustomRouletteView extends View {
         // 화살표 페인트 설정
         arrowPaint.setColor(0xFFFF0000); // 빨간색 화살표
         arrowPaint.setStyle(Paint.Style.FILL);
+
     }
 
     public void setRouletteData(List<String> data, int[] colors) {
@@ -78,11 +80,9 @@ public class CustomRouletteView extends View {
         centerX = rectF.centerX();
         centerY = rectF.centerY();
 
-        // 원형 룰렛 그리기
+        // 룰렛 그리기
         drawRoulette(canvas, rectF);
 
-        // 화살표 그리기
-        drawArrow(canvas);
     }
 
     private void drawRoulette(Canvas canvas, RectF rectF) {
@@ -91,6 +91,7 @@ public class CustomRouletteView extends View {
             throw new IllegalArgumentException("룰렛 데이터는 2개 이상 8개 이하이어야 합니다.");
         }
 
+        // 각 섹션의 각도 계산
         float sweepAngle = 360f / rouletteDataList.size();
         float radius = (rectF.right - rectF.left) / 2 * 0.5f; // 텍스트 위치 계산에 사용
 
@@ -112,20 +113,10 @@ public class CustomRouletteView extends View {
             canvas.drawText(text, x, y, textPaint);
         }
     }
-
-    private void drawArrow(Canvas canvas) {
-        float arrowWidth = 40f;  // 화살표의 밑변 길이
-        float arrowHeight = 60f; // 화살표의 높이
-
-        Path arrowPath = new Path();
-        arrowPath.moveTo(centerX, centerY - 350); // 삼각형 꼭짓점 (위쪽)
-        arrowPath.lineTo(centerX - arrowWidth / 2, centerY - 350 + arrowHeight); // 좌측 끝점
-        arrowPath.lineTo(centerX + arrowWidth / 2, centerY - 350 + arrowHeight); // 우측 끝점
-        arrowPath.close();
-
-        canvas.drawPath(arrowPath, arrowPaint);
-    }
-
+    /**
+     * 룰렛 회전 함수
+     * @param toDegrees : 종료 각도(시작 각도 : 0)
+     */
     public void rotateRoulette(float toDegrees) {
         Animation.AnimationListener animListener = new Animation.AnimationListener() {
             @Override
