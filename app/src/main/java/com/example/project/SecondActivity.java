@@ -28,13 +28,14 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second);
 
-        LinearLayout btnChina2 = findViewById(R.id.btnChina2);
-        LinearLayout btnSushi2 = findViewById(R.id.btnSushi2);
-        LinearLayout btnSteak2 = findViewById(R.id.btnSteak2);
-        LinearLayout btnFast2 = findViewById(R.id.btnFast2);
-        LinearLayout btnCafe2 = findViewById(R.id.btnCafe2);
-        Button btnDis = findViewById(R.id.btnDis);
-        Button btnRat = findViewById(R.id.btnRat);
+        LinearLayout btnChina2 = (LinearLayout) findViewById(R.id.btnChina2);
+        LinearLayout btnSushi2 = (LinearLayout) findViewById(R.id.btnSushi2);
+        LinearLayout btnSteak2 = (LinearLayout) findViewById(R.id.btnSteak2);
+        LinearLayout btnFast2 = (LinearLayout) findViewById(R.id.btnFast2);
+        LinearLayout btnCafe2 = (LinearLayout) findViewById(R.id.btnCafe2);
+        Button btnDis = (Button) findViewById(R.id.btnDis);
+        Button btnRat = (Button) findViewById(R.id.btnRat);
+        Button btnRe = (Button) findViewById(R.id.btnRe);
 
         RatingBar[] koreanFoodRatings = new RatingBar[51];
         TextView[] koreanFoodNames = new TextView[51];
@@ -78,7 +79,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
 
-        // 햄버거 버튼 클릭 이벤트
+        // 패스트푸드/분식 버튼 클릭 이벤트
         btnFast2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,6 +115,16 @@ public class SecondActivity extends AppCompatActivity {
                 rating_array(db, 2, koreanFoodRatings);
                 pictures_array(db, 2, imageUrls);
                 etc_array(db, 2, koreanFoodMenus, koreanFoodAddress, koreanFoodTel, koreanFoodTime);
+            }
+        });
+        // 돌아가기 버튼 클릭 이벤트
+        btnRe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // MainActivity로 이동
+                Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish(); // 현재 Activity 종료
             }
         });
         for (int i = 0; i < btnRice.length; i++) {

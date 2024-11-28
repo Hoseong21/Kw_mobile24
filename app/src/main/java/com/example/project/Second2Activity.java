@@ -27,13 +27,14 @@ public class Second2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second2);
 
-        LinearLayout btnChina2 = findViewById(R.id.btnChina2);
-        LinearLayout btnSushi2 = findViewById(R.id.btnSushi2);
-        LinearLayout btnSteak2 = findViewById(R.id.btnSteak2);
-        LinearLayout btnFast2 = findViewById(R.id.btnFast2);
-        LinearLayout btnCafe2 = findViewById(R.id.btnCafe2);
-        Button btnDis = findViewById(R.id.btnDis);
-        Button btnRat = findViewById(R.id.btnRat);
+        LinearLayout btnRice2 = (LinearLayout) findViewById(R.id.btnRice2);
+        LinearLayout btnSushi2 = (LinearLayout) findViewById(R.id.btnSushi2);
+        LinearLayout btnSteak2 = (LinearLayout) findViewById(R.id.btnSteak2);
+        LinearLayout btnFast2 = (LinearLayout) findViewById(R.id.btnFast2);
+        LinearLayout btnCafe2 = (LinearLayout) findViewById(R.id.btnCafe2);
+        Button btnDis = (Button) findViewById(R.id.btnDis);
+        Button btnRat = (Button) findViewById(R.id.btnRat);
+        Button btnRe = (Button) findViewById(R.id.btnRe);
         
         RatingBar[] chinaFoodRatings = new RatingBar[14];
         TextView[] chinaFoodNames = new TextView[14];
@@ -50,8 +51,8 @@ public class Second2Activity extends AppCompatActivity {
             btnChina[i - 1] = findViewById(resID); // 배열에 할당
         }
 
-        // 중식 버튼 클릭 이벤트
-        btnChina2.setOnClickListener(new View.OnClickListener() {
+        // 한식 버튼 클릭 이벤트
+        btnRice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Second2Activity.this, SecondActivity.class);
@@ -77,7 +78,7 @@ public class Second2Activity extends AppCompatActivity {
             }
         });
 
-        // 햄버거 버튼 클릭 이벤트
+        // 패스트푸드/분식 버튼 클릭 이벤트
         btnFast2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,7 +114,17 @@ public class Second2Activity extends AppCompatActivity {
                 pictures_array(db, 2, imageUrls);
                 etc_array(db, 2, chinaFoodMenus, chinaFoodAddress, chinaFoodTel, chinaFoodTime);
             }
-        });        
+        });
+        // 돌아가기 버튼 클릭 이벤트
+        btnRe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // MainActivity로 이동
+                Intent intent = new Intent(Second2Activity.this, MainActivity.class);
+                startActivity(intent);
+                finish(); // 현재 Activity 종료
+            }
+        });
         for (int i = 0; i < btnChina.length; i++) {
             final int index = i;  // i 값을 final로 선언하여 Intent에서 사용할 수 있도록 함
             btnChina[i].setOnClickListener(v -> {

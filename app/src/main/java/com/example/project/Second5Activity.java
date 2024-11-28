@@ -26,13 +26,14 @@ public class Second5Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second5);
 
-        LinearLayout btnRice2 = findViewById(R.id.btnRice2);
-        LinearLayout btnChina2 = findViewById(R.id.btnChina2);
-        LinearLayout btnSushi2 = findViewById(R.id.btnSushi2);
-        LinearLayout btnSteak2 = findViewById(R.id.btnSteak2);
-        LinearLayout btnCafe2 = findViewById(R.id.btnCafe2);
-        Button btnDis = findViewById(R.id.btnDis);
-        Button btnRat = findViewById(R.id.btnRat);
+        LinearLayout btnRice2 = (LinearLayout) findViewById(R.id.btnRice2);
+        LinearLayout btnChina2 = (LinearLayout) findViewById(R.id.btnChina2);
+        LinearLayout btnSushi2 = (LinearLayout) findViewById(R.id.btnSushi2);
+        LinearLayout btnSteak2 = (LinearLayout) findViewById(R.id.btnSteak2);
+        LinearLayout btnCafe2 = (LinearLayout) findViewById(R.id.btnCafe2);
+        Button btnDis = (Button) findViewById(R.id.btnDis);
+        Button btnRat = (Button) findViewById(R.id.btnRat);
+        Button btnRe = (Button) findViewById(R.id.btnRe);
 
         RatingBar[] fastFoodRatings = new RatingBar[47];
         TextView[] fastFoodNames = new TextView[47];
@@ -111,6 +112,16 @@ public class Second5Activity extends AppCompatActivity {
                 rating_array(db, 2, fastFoodRatings);
                 pictures_array(db, 2, imageUrls);
                 etc_array(db, 2, fastFoodMenus, fastFoodAddress, fastFoodTel, fastFoodTime);
+            }
+        });
+        // 돌아가기 버튼 클릭 이벤트
+        btnRe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // MainActivity로 이동
+                Intent intent = new Intent(Second5Activity.this, MainActivity.class);
+                startActivity(intent);
+                finish(); // 현재 Activity 종료
             }
         });
         for (int i = 0; i < btnFast.length; i++) {
