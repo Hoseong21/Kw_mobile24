@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         CustomRouletteView rouletteView = findViewById(R.id.roulette_view);
-        List<String> data = Arrays.asList("한식", "중식", "양식", "일식", "햄버거", "카페");
+        List<String> data = Arrays.asList("한식", "중식", "양식", "일식", "패/분", "카페");
         int[] colors = {
                 R.color.red,
                 R.color.blue,

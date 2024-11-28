@@ -33,15 +33,16 @@
 
         <LinearLayout
             android:id="@+id/btnrice"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:layout_margin="5dp"
             android:background="@drawable/shape">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:src="@drawable/f_rice"/>
 
 
@@ -51,20 +52,21 @@
                 android:padding="0dp"
                 android:text="한식"
                 android:textColor="#000000"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
 
         </LinearLayout>
         <LinearLayout
             android:id="@+id/btnchina"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:layout_margin="5dp"
             android:background="@drawable/shape">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:src="@drawable/f_china"/>
 
 
@@ -74,42 +76,22 @@
                 android:padding="0dp"
                 android:text="중식"
                 android:textColor="#000000"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
 
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/btnsteak"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/shape">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/f_steak"/>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:text="양식"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-            </LinearLayout>
         <LinearLayout
             android:id="@+id/btnsushi"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:layout_margin="5dp"
             android:background="@drawable/shape">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:src="@drawable/f_sushi"/>
 
 
@@ -119,19 +101,45 @@
                 android:padding="0dp"
                 android:text="일식"
                 android:textColor="#000000"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
         </LinearLayout>
+
         <LinearLayout
-            android:id="@+id/btnfastfood"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:id="@+id/btnsteak"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:layout_margin="5dp"
             android:background="@drawable/shape">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/f_steak"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="양식"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnfastfood"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:src="@drawable/f_fastfood"/>
 
 
@@ -139,22 +147,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="0dp"
-                android:text="햄버거"
+                android:text="패스트푸드/분식"
                 android:textColor="#000000"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
 
         </LinearLayout>
         <LinearLayout
             android:id="@+id/btncoffee"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:layout_margin="5dp"
             android:background="@drawable/shape">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:src="@drawable/f_coffee"/>
 
 
@@ -164,11 +173,18 @@
                 android:padding="0dp"
                 android:text="카페"
                 android:textColor="#000000"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
 
         </LinearLayout>
 
     </GridLayout>
+
+    <ImageView
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:src="@drawable/arrow" />
+
     <com.example.project.CustomRouletteView
         android:id="@+id/roulette_view"
         android:layout_width="match_parent"

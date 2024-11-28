@@ -70,10 +70,10 @@ public class CustomRouletteView extends View {
         if (rouletteDataList == null || shapeColors == null) return;
 
         RectF rectF = new RectF(
-                (getWidth() - 500) / 2 + getPaddingLeft(),    // 좌측
-                (getHeight() - 500) / 2 + getPaddingTop(),   // 상단
-                (getWidth() + 500) / 2 - getPaddingRight(),    // 우측
-                (getHeight() + 500) / 2 - getPaddingBottom()    // 하단
+                (getWidth() - 450) / 2 + getPaddingLeft(),    // 좌측
+                (getHeight() - 450) / 2 + getPaddingTop(),   // 상단
+                (getWidth() + 450) / 2 - getPaddingRight(),    // 우측
+                (getHeight() + 450) / 2 - getPaddingBottom()    // 하단
         );
 
         // 중심 좌표 계산
