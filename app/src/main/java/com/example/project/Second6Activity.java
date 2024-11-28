@@ -34,16 +34,16 @@ public class Second6Activity extends AppCompatActivity {
         Button btnDis = findViewById(R.id.btnDis);
         Button btnRat = findViewById(R.id.btnRat);
 
-        RatingBar[] cafeRatings = new RatingBar[30];
-        TextView[] cafeNames = new TextView[30];
-        String[] imageUrls = new String[30];
-        String[] cafeMenus = new String[30];
-        String[] cafeAddress = new String[30];
-        String[] cafeTel = new String[30];
-        String[] cafeTime = new String[30];
+        RatingBar[] cafeRatings = new RatingBar[27];
+        TextView[] cafeNames = new TextView[27];
+        String[] imageUrls = new String[27];
+        String[] cafeMenus = new String[27];
+        String[] cafeAddress = new String[27];
+        String[] cafeTel = new String[27];
+        String[] cafeTime = new String[27];
 
-        LinearLayout[] btnCafe = new LinearLayout[30];
-        for (int i = 1; i <= 30; i++) {
+        LinearLayout[] btnCafe = new LinearLayout[27];
+        for (int i = 1; i <= 27; i++) {
             String buttonID = "btnCafe_" + i; // 동적 ID 생성
             int resID = getResources().getIdentifier(buttonID, "id", getPackageName()); // 리소스 ID 가져오기
             btnCafe[i - 1] = findViewById(resID); // 배열에 할당
@@ -135,7 +135,7 @@ public class Second6Activity extends AppCompatActivity {
         etc_array(db, 0, cafeMenus, cafeAddress, cafeTel, cafeTime);
     }
     private void name_array(SQLiteDatabase db, int num, TextView[] cafeNames) {
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 27; i++) {
             String textViewID = "cafename" + (i + 1); // ID 문자열 생성
             int resID = getResources().getIdentifier(textViewID, "id", getPackageName());
             cafeNames[i] = findViewById(resID); // TextView 배열에 할당
@@ -144,18 +144,18 @@ public class Second6Activity extends AppCompatActivity {
         // Cursor 쿼리 실행
         Cursor cafenamecursor;
         if (num == 0) {
-            cafenamecursor = db.rawQuery("SELECT 이름 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 30", null);
+            cafenamecursor = db.rawQuery("SELECT 이름 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 27", null);
         } else if (num == 1) {
-            cafenamecursor = db.rawQuery("SELECT 이름 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 30", null);
+            cafenamecursor = db.rawQuery("SELECT 이름 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 27", null);
         } else {
-            cafenamecursor = db.rawQuery("SELECT 이름 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 30", null);
+            cafenamecursor = db.rawQuery("SELECT 이름 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 27", null);
         }
 
         // Cursor로 데이터를 가져와 TextView에 설정
         if (cafenamecursor.moveToFirst()) {
             int index = 0;
             do {
-                if (index < 30) { // 최대 30개의 값만 처리
+                if (index < 27) { // 최대 27개의 값만 처리
                     String nameValue = cafenamecursor.getString(0); // 이름 가져오기
                     cafeNames[index].setText(nameValue); // TextView에 설정
                 }
@@ -172,14 +172,14 @@ public class Second6Activity extends AppCompatActivity {
             cafeRatings[i] = findViewById(resID); // 배열에 RatingBar 할당
         }
 
-        // "카페/디저트" 분류의 별점 값을 30개 가져오는 쿼리
+        // "카페/디저트" 분류의 별점 값을 27개 가져오는 쿼리
         String query;
         if (num == 0) {
-            query = "SELECT 별점 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 30";
+            query = "SELECT 별점 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 27";
         } else if (num == 1) {
-            query = "SELECT 별점 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 30";
+            query = "SELECT 별점 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 27";
         } else {
-            query = "SELECT 별점 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 30";
+            query = "SELECT 별점 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 27";
         }
 
         Cursor caferatingcursor = db.rawQuery(query, null);
@@ -218,11 +218,11 @@ public class Second6Activity extends AppCompatActivity {
 
         // 쿼리 실행
         if (num == 0) {
-            cafeimageurlcursor = db.rawQuery("SELECT \"이미지 url\" FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 30", null);
+            cafeimageurlcursor = db.rawQuery("SELECT \"이미지 url\" FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 27", null);
         } else if (num == 1) {
-            cafeimageurlcursor = db.rawQuery("SELECT \"이미지 url\" FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 30", null);
+            cafeimageurlcursor = db.rawQuery("SELECT \"이미지 url\" FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 27", null);
         } else {
-            cafeimageurlcursor = db.rawQuery("SELECT \"이미지 url\" FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 30", null);
+            cafeimageurlcursor = db.rawQuery("SELECT \"이미지 url\" FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 27", null);
         }
 
         // 커서 데이터를 배열에 저장
@@ -246,7 +246,7 @@ public class Second6Activity extends AppCompatActivity {
                     R.id.cafepicture11, R.id.cafepicture12, R.id.cafepicture13, R.id.cafepicture14, R.id.cafepicture15,
                     R.id.cafepicture16, R.id.cafepicture17, R.id.cafepicture18, R.id.cafepicture19, R.id.cafepicture20,
                     R.id.cafepicture21, R.id.cafepicture22, R.id.cafepicture23, R.id.cafepicture24, R.id.cafepicture25,
-                    R.id.cafepicture26, R.id.cafepicture27, R.id.cafepicture28, R.id.cafepicture29, R.id.cafepicture30
+                    R.id.cafepicture26, R.id.cafepicture27
             };
 
             // Glide를 사용하여 ImageView에 이미지 로드
@@ -264,17 +264,17 @@ public class Second6Activity extends AppCompatActivity {
         // Cursor 쿼리 실행
         Cursor cafeMenuCursor;
         if (num == 0) {
-            cafeMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 30", null);
+            cafeMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 27", null);
         } else if (num == 1) {
-            cafeMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 30", null);
+            cafeMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 27", null);
         } else {
-            cafeMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 30", null);
+            cafeMenuCursor = db.rawQuery("SELECT 대표메뉴 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 27", null);
         }
         // Cursor로 데이터를 가져와 배열에 저장
         if (cafeMenuCursor.moveToFirst()) {
             int index = 0;
             do {
-                if (index < 30) { // 최대 30개의 값만 처리
+                if (index < 27) { // 최대 27개의 값만 처리
                     String menuValue = cafeMenuCursor.getString(0); // 대표메뉴 가져오기
                     cafeMenus[index] = menuValue; // 배열에 저장
                 }
@@ -287,17 +287,17 @@ public class Second6Activity extends AppCompatActivity {
         // Cursor 쿼리 실행
         Cursor cafeAddressCursor;
         if (num == 0) {
-            cafeAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 30", null);
+            cafeAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 27", null);
         } else if (num == 1) {
-            cafeAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 30", null);
+            cafeAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 27", null);
         } else {
-            cafeAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 30", null);
+            cafeAddressCursor = db.rawQuery("SELECT 주소 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 27", null);
         }
         // Cursor로 데이터를 가져와 배열에 저장
         if (cafeAddressCursor.moveToFirst()) {
             int index = 0;
             do {
-                if (index < 30) { // 최대 30개의 값만 처리
+                if (index < 27) { // 최대 27개의 값만 처리
                     String addressValue = cafeAddressCursor.getString(0); // 대표메뉴 가져오기
                     cafeAddress[index] = addressValue; // 배열에 저장
                 }
@@ -309,18 +309,18 @@ public class Second6Activity extends AppCompatActivity {
         // Cursor 쿼리 실행
         Cursor telCursor;
         if (num == 0) {
-            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 30", null);
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 27", null);
         } else if (num == 1) {
-            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 30", null);
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 27", null);
         } else {
-            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 30", null);
+            telCursor = db.rawQuery("SELECT 전화번호 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 27", null);
         }
 
         // Cursor로 데이터를 가져와 배열에 저장
         if (telCursor.moveToFirst()) {
             int index = 0;
             do {
-                if (index < 30) { // 최대 30개의 값만 처리
+                if (index < 27) { // 최대 27개의 값만 처리
                     String telValue = telCursor.getString(0); // 전화번호 가져오기
                     if (telValue == null || telValue.trim().isEmpty()) {
                         cafeTel[index] = "확인 필요"; // 데이터가 없으면 "확인 필요"로 설정
@@ -336,17 +336,17 @@ public class Second6Activity extends AppCompatActivity {
         // Cursor 쿼리 실행
         Cursor cafeTimeCursor;
         if (num == 0) {
-            cafeTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 30", null);
+            cafeTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '카페/디저트' LIMIT 27", null);
         } else if (num == 1) {
-            cafeTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 30", null);
+            cafeTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY 거리 ASC LIMIT 27", null);
         } else {
-            cafeTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 30", null);
+            cafeTimeCursor = db.rawQuery("SELECT 영업시간 FROM restaurantDB WHERE 분류 = '카페/디저트' ORDER BY CASE WHEN 별점 = '별점 없음' THEN 1 ELSE 0 END, 별점 DESC LIMIT 27", null);
         }
         // Cursor로 데이터를 가져와 배열에 저장
         if (cafeTimeCursor.moveToFirst()) {
             int index = 0;
             do {
-                if (index < 30) { // 최대 30개의 값만 처리
+                if (index < 27) { // 최대 27개의 값만 처리
                     String timeValue = cafeTimeCursor.getString(0); // 대표메뉴 가져오기
                     cafeTime[index] = timeValue; // 배열에 저장
                 }

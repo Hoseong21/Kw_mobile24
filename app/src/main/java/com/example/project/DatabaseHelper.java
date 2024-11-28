@@ -21,7 +21,7 @@ import java.io.OutputStream;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "restaurantDB.db"; // assets 폴더의 데이터베이스 이름
-    private static final int DATABASE_VERSION = 1; // 데이터베이스 버전
+    private static final int DATABASE_VERSION = 3; // 데이터베이스 버전
     private final Context context;
     private static final String DATABASE_PATH = "/data/data/com.example.project/databases/"; // 앱 데이터베이스 경로
 
@@ -40,11 +40,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // 이미 복사된 데이터베이스를 사용하기 때문에 새로 생성하지 않음
     }
 
+    private void upgradeDatabase() {
+        try {
+            // 기존 데이터베이스 삭제
+            context.deleteDatabase(DATABASE_NAME);
+
+            // 새 데이터베이스 복사
+            copyDatabase();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // 업그레이드 시 기존 데이터베이스 삭제 후 복사
-        context.deleteDatabase(DATABASE_NAME);
-        copyDatabase();
+        upgradeDatabase();
     }
 
     private boolean checkDatabaseExists() {

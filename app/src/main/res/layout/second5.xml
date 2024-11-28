@@ -2920,62 +2920,6 @@
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
-
-                <!-- 세 번째 추가 아이템 -->
-                <LinearLayout
-                    android:id="@+id/btnFast_48"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:layout_margin="1dp"
-                    android:background="@drawable/shape"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/fastfoodpicture48"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/f_fastfood" />
-
-                    <TableLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center">
-
-                        <TableRow>
-
-                            <TextView
-                                android:id="@+id/fastfoodname48"
-                                android:layout_width="60dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:ellipsize="end"
-                                android:gravity="start"
-                                android:maxLines="1"
-                                android:padding="1dp"
-                                android:text="패스트푸드48"
-                                android:textColor="#000000"
-                                android:textSize="11dp" />
-
-                            <RatingBar
-                                android:id="@+id/fastfoodrating48"
-                                style="@style/Widget.AppCompat.RatingBar.Small"
-                                android:layout_width="77dp"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:isIndicator="true"
-                                android:numStars="5"
-                                android:rating="4"
-                                android:scaleX="0.7"
-                                android:scaleY="0.7"
-                                android:stepSize="0.5" />
-
-                        </TableRow>
-                    </TableLayout>
-                </LinearLayout>
-
             </LinearLayout>
 
         </GridLayout>
